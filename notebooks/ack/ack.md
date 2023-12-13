@@ -1,7 +1,7 @@
 # Acknowledgements
 
-## Funding acknowedgements
-This project was made possible by Open Education Resources (OER) Resource Allocation grant at UBC Vancouver. 
+## Funding acknowledgements
+This project was made possible by 2023/24 OER Fund Implementation Grant at UBC Vancouver.
 
 ## Contributions
 Content for various chapers was created by the following students:
