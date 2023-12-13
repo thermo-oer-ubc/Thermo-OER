@@ -1,6 +1,9 @@
 format: jb-book
 root: intro
 parts:
+- caption: Acknowledgements
+  chapters:
+    - file: notebooks/ack/ack.md
 - caption: Getting Started
   chapters:
     - file: notebooks/getting_started/getting_started.md
