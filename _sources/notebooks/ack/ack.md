@@ -17,7 +17,7 @@ The following faculty members were responsible for providing feedback along the 
 
 [Dr. Casey Keulen](https://mtrl.ubc.ca/casey-keulen/), Assistant Professor of Teaching, Department of Materials Engineering, UBC Vancouver.
 
-[Dr. Amir M. Dekhoda](https://mtrl.ubc.ca/amir-m-dehkhoda/), Assistant Professor of Teaching, Department of Materials Engineering, UBC Vancouver.
+[Dr. Amir M. Dehkhoda](https://mtrl.ubc.ca/amir-m-dehkhoda/), Assistant Professor of Teaching, Department of Materials Engineering, UBC Vancouver.
 
 [Dr. Claire (Yu) Yan](https://apsc.ubc.ca/profile/yu-claire-yan), Associate Professor of Teaching, Department of Mechanical Engineering, UBC Okanagan.
 
