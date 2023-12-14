@@ -19,5 +19,5 @@ The following faculty members were responsible for providing feedback along the 
 
 [Dr. Amir M. Dekhoda](https://mtrl.ubc.ca/amir-m-dehkhoda/), Assistant Professor of Teaching, Department of Materials Engineering, UBC Vancouver.
 
-[Dr. Claire (Yu) Yan](https://apsc.ubc.ca/profile/yu-claire-yan), Associate Professor of Teaching, Deparmtne of Mechanical Engineering, UBC Okanagan.
+[Dr. Claire (Yu) Yan](https://apsc.ubc.ca/profile/yu-claire-yan), Associate Professor of Teaching, Department of Mechanical Engineering, UBC Okanagan.
 
