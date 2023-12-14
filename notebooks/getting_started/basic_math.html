@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
 
     <title>Basic operations inside Jupyter &#8212; OER Engineering Thermodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,14 +39,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -77,6 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -137,13 +148,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../../_static/text16.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/text16.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/text16.png" class="logo__image only-light" alt="OER Engineering Thermodynamics - Home"/>
+    <script>document.write(`<img src="../../_static/text16.png" class="logo__image only-dark" alt="OER Engineering Thermodynamics - Home"/>`);</script>
   
   
 </a></div>
@@ -394,10 +406,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -405,7 +417,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -514,7 +526,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Y values&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/7ac3c72a5cf7c12a6d29935089188458121f76b56b85dc63ef9b960877ea8138.png" src="../../_images/7ac3c72a5cf7c12a6d29935089188458121f76b56b85dc63ef9b960877ea8138.png" />
+<img alt="../../_images/d4ca1d9555daa33a4bf01dc1887639d8261fc8ad172a196ab1955df7461d4613.png" src="../../_images/d4ca1d9555daa33a4bf01dc1887639d8261fc8ad172a196ab1955df7461d4613.png" />
 </div>
 </div>
 </section>
@@ -565,10 +577,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f39de9ef090&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6285497d60&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/eb0175dd67039a5c38869034f7111caaaab7bf7909c730fc79d38ad482163868.png" src="../../_images/eb0175dd67039a5c38869034f7111caaaab7bf7909c730fc79d38ad482163868.png" />
+<img alt="../../_images/642f4881db6488054865e83c11b32bece169375a4c3acd18f6d5f7e6c17d193b.png" src="../../_images/642f4881db6488054865e83c11b32bece169375a4c3acd18f6d5f7e6c17d193b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -579,10 +591,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f39de8f8c50&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f628541f9a0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/94c31c22882bc92aba9bd371c7ec296eb303dd50d3e98bdbf04c95ca2f796a2b.png" src="../../_images/94c31c22882bc92aba9bd371c7ec296eb303dd50d3e98bdbf04c95ca2f796a2b.png" />
+<img alt="../../_images/d3bd21d0785762a9f629ceb393d28346185b9b98338d39ba03c9381b3596c28d.png" src="../../_images/d3bd21d0785762a9f629ceb393d28346185b9b98338d39ba03c9381b3596c28d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -592,9 +604,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.37551136, 0.73968936, 0.84691936, 0.12771959, 0.31038809,
-       0.98037764, 0.25896895, 0.91663336, 0.15085084, 0.29347253,
-       0.6959118 , 0.44705479, 0.476064  , 0.83736866, 0.61965909])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.89342128, 0.22409828, 0.97702249, 0.5533418 , 0.72261383,
+       0.63191313, 0.2455794 , 0.588028  , 0.94449222, 0.81295154,
+       0.85673411, 0.98242762, 0.70420093, 0.73077149, 0.63828771])
 </pre></div>
 </div>
 </div>
@@ -606,7 +618,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([87, 85, 84, 60, 99, 54, 83, 66, 72, 73, 76, 76])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([59, 83, 54, 95, 99, 89, 88, 75, 55, 65, 76, 68])
 </pre></div>
 </div>
 </div>
@@ -624,10 +636,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f39de88b990&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f62b86e7f70&gt;
 </pre></div>
 </div>
-<img alt="../../_images/1b7cdeaf1f34b4389a2c762f3cd2b45b387d03c2f4ba0ad1723d8b3206d86c34.png" src="../../_images/1b7cdeaf1f34b4389a2c762f3cd2b45b387d03c2f4ba0ad1723d8b3206d86c34.png" />
+<img alt="../../_images/23c86f31aa0456a60db1fc341134cdbbe773436b95e1f84a1552570b328da3e9.png" src="../../_images/23c86f31aa0456a60db1fc341134cdbbe773436b95e1f84a1552570b328da3e9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -649,7 +661,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-10.0, 10.0)
 </pre></div>
 </div>
-<img alt="../../_images/b37cddb390bced39f6103382e4d906d55028a2ccc90b41957041f6f5564a1c6d.png" src="../../_images/b37cddb390bced39f6103382e4d906d55028a2ccc90b41957041f6f5564a1c6d.png" />
+<img alt="../../_images/736f143bbe7d458ae4ef553f471bda9900c8c0b0035c475322fd610e68859e3e.png" src="../../_images/736f143bbe7d458ae4ef553f471bda9900c8c0b0035c475322fd610e68859e3e.png" />
 </div>
 </div>
 </section>
@@ -719,11 +731,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="getting_started.html"
@@ -743,10 +754,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -814,8 +822,8 @@ By Faculty of Applied Science, UBC licensed under <a href="https://creativecommo
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
