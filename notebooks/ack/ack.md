@@ -1,7 +1,7 @@
 # Acknowledgements
 
 ## Funding acknowledgements
-This project was made possible by 2023/24 OER Fund Implementation Grant at UBC Vancouver.
+This project was made possible by 2023/24 [OER Affordability Grant](https://oerfund.open.ubc.ca/oer-affordability-grants/) (formerly known as OER Implementation Grant) at UBC Vancouver.
 
 ## Contributions
 Content for various chapers was created by the following students:
