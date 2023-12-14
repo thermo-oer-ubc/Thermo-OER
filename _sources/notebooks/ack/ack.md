@@ -6,7 +6,7 @@ This project was made possible by 2023/24 OER Fund Implementation Grant at UBC V
 ## Contributions
 Content for various chapers was created by the following students:
 
-Ali Doustahadi, Graduate Student in the Department of Materials Engineering, UBC Vancouver, created material for Chapter 3 and Chapter 5.
+Ali Doustahadi, MASc candidate in the Department of Materials Engineering, UBC Vancouver, created material for Chapter 3 and Chapter 5.
 
 Chun-Sheng Wang, Postdoctoral research fellow in the Department of Mechanical Engineering, UBC Okanagan, created material for Chapter 1 and 6.
 
