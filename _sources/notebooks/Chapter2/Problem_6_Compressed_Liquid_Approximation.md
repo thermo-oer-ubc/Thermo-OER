@@ -33,7 +33,7 @@ s = CP.PropsSI('S', 'T', T, 'Q', 0, 'Water')/1e3  # Specific entropy
 
 # Output the results
 print(f"Specific volume: {round(v,2)} m^3/kg")
-print(f"Specific internal energy: {round(u,2)} J/kg")
-print(f"Specific enthalpy: {round(h,2)} J/kg")
-print(f"Specific entropy: {round(s,2)} J/kg*K")
+print(f"Specific internal energy: {round(u,2)} kJ/kg")
+print(f"Specific enthalpy: {round(h,2)} kJ/kg")
+print(f"Specific entropy: {round(s,2)} kJ/kg*K")
 ```
