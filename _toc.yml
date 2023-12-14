@@ -11,16 +11,18 @@ parts:
     - file: notebooks/getting_started/Table_G1_Properties_of_ideal_gases.ipynb
 - caption:  Modules
   chapters:
+  - file: notebooks/Chapter1/chapter1.md
+    sections:
+        - file: notebooks/Chapter1/Problem_1_Pressure_in_a_Tank.md
+        - file: notebooks/Chapter1/Problem_2_Density_of_a_Gas.md
+        - file: notebooks/Chapter1/Problem_3_Energy_in_a_Moving_Vehicle.md
+        - file: notebooks/Chapter1/Problem_4_Enthalpy_of_a_Steam.md
+        - file: notebooks/Chapter1/Problem_5_Quality_of_a_Vapor_Mixture.md
+        - file: notebooks/Chapter1/Problem_6_Compressed_Liquid_Approximation.md
+        - file: notebooks/Chapter1/Problem_7_Conversion_of_Temperature.md
+        - file: notebooks/Chapter1/Problem_8_Specific_Entropy_Calculation.md
   - file: notebooks/Chapter2/thermo-properties.md
     sections:
-        - file: notebooks/Chapter2/Problem_1_Pressure_in_a_Tank.md
-        - file: notebooks/Chapter2/Problem_2_Density_of_a_Gas.md
-        - file: notebooks/Chapter2/Problem_3_Energy_in_a_Moving_Vehicle.md
-        - file: notebooks/Chapter2/Problem_4_Enthalpy_of_a_Steam.md
-        - file: notebooks/Chapter2/Problem_5_Quality_of_a_Vapor_Mixture.md
-        - file: notebooks/Chapter2/Problem_6_Compressed_Liquid_Approximation.md
-        - file: notebooks/Chapter2/Problem_7_Conversion_of_Temperature.md
-        - file: notebooks/Chapter2/Problem_8_Specific_Entropy_Calculation.md
           #- file: notebooks/Chapter2/complete-table-ammonia.ipynb
         - file: notebooks/Chapter2/complete-table-water.ipynb
         - file: notebooks/Chapter2/complete-table-R134a.ipynb
@@ -34,19 +36,19 @@ parts:
         - file: notebooks/Chapter3/CH3-Q4_v1.ipynb
         - file: notebooks/Chapter3/CH3-Q5_v1.ipynb
         - file: notebooks/Chapter3/CH3-Q6_v1.ipynb
-  - file: notebooks/Chapter1/first-law.md
+  - file: notebooks/Chapter4/first-law.md
     sections:
-        #- file: notebooks/Chapter1/Thermodynamics_Example_1.md
-        - file: notebooks/Chapter1/Thermodynamics_Example_2.md
-        - file: notebooks/Chapter1/Isochoric_Process_Problem_3.md
-        - file: notebooks/Chapter1/Adiabatic_Compression_Problem_4.md
-        - file: notebooks/Chapter1/Heat_Transfer_Rigid_Container_Problem_5.md
-        - file: notebooks/Chapter1/Helium_Spring_Loaded_Cylinder_Problem_6.md
-        - file: notebooks/Chapter1/Isothermal_Expansion_Nitrogen_Problem_7.md
-        - file: notebooks/Chapter1/Adiabatic_Compression_Rigid_Container_Problem_8.md
-        - file: notebooks/Chapter1/linear-interpolation-nternal-energy.ipynb
-        - file: notebooks/Chapter1/use_different_references_in_CoolProp.ipynb
-        - file: notebooks/Chapter1/Polytropic_Processes_Problem_Extended.ipynb
+        #- file: notebooks/Chapter4/Thermodynamics_Example_1.md
+        - file: notebooks/Chapter4/Thermodynamics_Example_2.md
+        - file: notebooks/Chapter4/Isochoric_Process_Problem_3.md
+        - file: notebooks/Chapter4/Adiabatic_Compression_Problem_4.md
+        - file: notebooks/Chapter4/Heat_Transfer_Rigid_Container_Problem_5.md
+        - file: notebooks/Chapter4/Helium_Spring_Loaded_Cylinder_Problem_6.md
+        - file: notebooks/Chapter4/Isothermal_Expansion_Nitrogen_Problem_7.md
+        - file: notebooks/Chapter4/Adiabatic_Compression_Rigid_Container_Problem_8.md
+        - file: notebooks/Chapter4/linear-interpolation-nternal-energy.ipynb
+        - file: notebooks/Chapter4/use_different_references_in_CoolProp.ipynb
+        - file: notebooks/Chapter4/Polytropic_Processes_Problem_Extended.ipynb
   - file: notebooks/Chapter5/chapter5.md
     sections:
         - file: notebooks/Chapter5/CH5-Q1.ipynb  
@@ -58,4 +60,6 @@ parts:
         - file: notebooks/Chapter5/CH5-Q7.ipynb
         - file: notebooks/Chapter5/CH5-Q8.ipynb
         - file: notebooks/Chapter5/CH5-Q9.ipynb
-
+  - file: notebooks/Chapter6/chapter6.md
+    sections:
+        - file: notebooks/Chapter6/CH6-Q1.ipynb

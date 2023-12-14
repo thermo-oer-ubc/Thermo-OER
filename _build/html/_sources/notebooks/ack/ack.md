@@ -6,11 +6,11 @@ This project was made possible by 2023/24 [OER Affordability Grant](https://oerf
 ## Contributions
 Content for various chapers was created by the following students:
 
-Ali Doustahadi, MASc candidate in the Department of Materials Engineering, UBC Vancouver, created material for Chapter 3 and Chapter 5.
+[Ali Doustahadi](https://ca.linkedin.com/in/ali-doustahadi-652251169), MASc candidate in the Department of Materials Engineering, UBC Vancouver, created material for Chapter 3 and Chapter 5.
 
-Chun-Sheng Wang, Postdoctoral research fellow in the Department of Mechanical Engineering, UBC Okanagan, created material for Chapter 1 and 6.
+[Dr.Chun-Sheng Wang](https://ca.linkedin.com/in/drcswang), Postdoctoral research fellow in the Department of Mechanical Engineering, UBC Okanagan, created material for Chapter 1 and 6.
 
-Hariharan Umashankar, PhD candidate in the Department of Materials Engineering, UBC Vancouver, created material for Chapter 2 and Chapter 4 and hosted this website on Github pages.
+[Hariharan Umashankar](https://www.linkedin.com/in/hariharan-hari-u-a25788254/), PhD candidate in the Department of Materials Engineering, UBC Vancouver, created material for Chapter 2 and Chapter 4 and hosted this website on Github pages.
 
 
 The following faculty members were responsible for providing feedback along the course of this project and acquiring the project funds:
