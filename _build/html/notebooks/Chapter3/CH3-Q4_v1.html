@@ -183,18 +183,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_1_Pressure_in_a_Tank.html">Pressure in a Tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_2_Density_of_a_Gas.html">Density of a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_3_Energy_in_a_Moving_Vehicle.html">Energy in a Moving Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_4_Enthalpy_of_a_Steam.html">Enthalpy of a Steam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_5_Quality_of_a_Vapor_Mixture.html">Quality of a Vapor Mixture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_6_Compressed_Liquid_Approximation.html">Compressed Liquid Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_7_Conversion_of_Temperature.html">Conversion of Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_8_Specific_Entropy_Calculation.html">Specific Entropy Calculation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/thermo-properties.html">2. Thermodynamic Properties of a Pure Substance</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_1_Pressure_in_a_Tank.html">Pressure in a Tank</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_2_Density_of_a_Gas.html">Density of a Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_3_Energy_in_a_Moving_Vehicle.html">Energy in a Moving Vehicle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_4_Enthalpy_of_a_Steam.html">Enthalpy of a Steam</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_5_Quality_of_a_Vapor_Mixture.html">Quality of a Vapor Mixture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_6_Compressed_Liquid_Approximation.html">Compressed Liquid Approximation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_7_Conversion_of_Temperature.html">Conversion of Temperature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_8_Specific_Entropy_Calculation.html">Specific Entropy Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-water.html">Complete the following table for Water:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-R134a.html">Complete the table: R-134a</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/piston-cylinder.html">Piston-cylinder: Isobaric process</a></li>
@@ -237,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q4_v1.2.html">P-h diagram for R-134a refrigerant</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q5.html">Refigeration cycle: R134a Part 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q5.html">Refrigeration cycle: R134a</a></li>
 
 
 
@@ -252,8 +252,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q7.html">Refrigeration cycle: Water flow-rate</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q8.html">Chapter 5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q9.html">Chapter 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q8.html">Multi-evaporator refrigeration system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q9.html">Nozzle: Hydrogen gas</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter6/chapter6.html">6. Entropy and the Second Law of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -504,7 +504,7 @@ document.write(`
 </div>
 <p>Then Nitrogen goes through an isothermal compression to double its pressure.</p>
 <p>given mass(<span class="math notranslate nohighlight">\(m\)</span>), gas constant (<span class="math notranslate nohighlight">\(R\)</span>) and temperature (<span class="math notranslate nohighlight">\(T\)</span>) are constant,</p>
-<p><span class="math notranslate nohighlight">\(P_2V_2=P_1V_1=mRT_1(orT_2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(P_2V_2=P_1V_1=mRT_1\)</span>(or <span class="math notranslate nohighlight">\(T_2)\)</span></p>
 <p>therefore</p>
 <p><span class="math notranslate nohighlight">\(V_2=P_1V_1/P_2\)</span></p>
 <p>where</p>
@@ -590,7 +590,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f28f6191c40&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f7824cd1cd0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/e0606e4c50a16d709d0ac7060183832e701e891b366fb3418ae4b6a770792ced.png" src="../../_images/e0606e4c50a16d709d0ac7060183832e701e891b366fb3418ae4b6a770792ced.png" />
@@ -629,7 +629,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f28f58a2d30&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f78243e1d00&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/c8ab35ac96a298d52de1ec0d1cf0c1ebbb0df2361d6d3f9b76864775cde7b294.png" src="../../_images/c8ab35ac96a298d52de1ec0d1cf0c1ebbb0df2361d6d3f9b76864775cde7b294.png" />
@@ -660,7 +660,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f28f57c7a60&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f7858f11550&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/cfb686cad76ddae592c52903070c4b8a774275dde86fb0b53483370bd456fc61.png" src="../../_images/cfb686cad76ddae592c52903070c4b8a774275dde86fb0b53483370bd456fc61.png" />

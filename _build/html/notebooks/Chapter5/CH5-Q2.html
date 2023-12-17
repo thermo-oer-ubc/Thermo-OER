@@ -183,18 +183,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_1_Pressure_in_a_Tank.html">Pressure in a Tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_2_Density_of_a_Gas.html">Density of a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_3_Energy_in_a_Moving_Vehicle.html">Energy in a Moving Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_4_Enthalpy_of_a_Steam.html">Enthalpy of a Steam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_5_Quality_of_a_Vapor_Mixture.html">Quality of a Vapor Mixture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_6_Compressed_Liquid_Approximation.html">Compressed Liquid Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_7_Conversion_of_Temperature.html">Conversion of Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_8_Specific_Entropy_Calculation.html">Specific Entropy Calculation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/thermo-properties.html">2. Thermodynamic Properties of a Pure Substance</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_1_Pressure_in_a_Tank.html">Pressure in a Tank</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_2_Density_of_a_Gas.html">Density of a Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_3_Energy_in_a_Moving_Vehicle.html">Energy in a Moving Vehicle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_4_Enthalpy_of_a_Steam.html">Enthalpy of a Steam</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_5_Quality_of_a_Vapor_Mixture.html">Quality of a Vapor Mixture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_6_Compressed_Liquid_Approximation.html">Compressed Liquid Approximation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_7_Conversion_of_Temperature.html">Conversion of Temperature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_8_Specific_Entropy_Calculation.html">Specific Entropy Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-water.html">Complete the following table for Water:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-R134a.html">Complete the table: R-134a</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/piston-cylinder.html">Piston-cylinder: Isobaric process</a></li>
@@ -237,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="CH5-Q4_v1.2.html">P-h diagram for R-134a refrigerant</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="CH5-Q5.html">Refigeration cycle: R134a Part 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-Q5.html">Refrigeration cycle: R134a</a></li>
 
 
 
@@ -252,8 +252,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="CH5-Q7.html">Refrigeration cycle: Water flow-rate</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="CH5-Q8.html">Chapter 5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CH5-Q9.html">Chapter 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-Q8.html">Multi-evaporator refrigeration system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-Q9.html">Nozzle: Hydrogen gas</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter6/chapter6.html">6. Entropy and the Second Law of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -452,6 +452,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
@@ -469,11 +470,14 @@ document.write(`
                   
   <section id="piston-cylinder-carbon-dioxide">
 <h1>Piston-cylinder: Carbon dioxide<a class="headerlink" href="#piston-cylinder-carbon-dioxide" title="Permalink to this heading">#</a></h1>
-<p>Consider carbon-dioxide stored in a cylinder-and-piston system at <span class="math notranslate nohighlight">\(1\:MPa\)</span> and <span class="math notranslate nohighlight">\(0 ^{\circ}  C\)</span> with a volume of <span class="math notranslate nohighlight">\(1\:m^3\)</span>. The piston is free to move keeping the pressure of carbon-diaxide constant. The system is then heated to <span class="math notranslate nohighlight">\(25 ^{\circ} C\)</span>. Using CoolProp as a tool, determine:</p>
+<section id="problem-statement">
+<h2>Problem statement:<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
+<p>Consider carbon-dioxide stored in a cylinder-and-piston system at <span class="math notranslate nohighlight">\(1\:MPa\)</span> and <span class="math notranslate nohighlight">\(0 ^{\circ}  C\)</span> with a volume of <span class="math notranslate nohighlight">\(1\:m^3\)</span>. The piston is free to move keeping the pressure of carbon-dioxide constant. The system is then heated to <span class="math notranslate nohighlight">\(25 ^{\circ} C\)</span>. Using CoolProp as a tool, determine:</p>
 <p>a)the mass of carbon-dioxide</p>
 <p>b)heat required to do so</p>
 <p>c)the required heat if the weight of the 500g aluminum piston and cylinder are to be considered</p>
-<p>d)the required heat in b if <span class="math notranslate nohighlight">\(C_p\)</span> is to be used to calculate <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of CoolProp? what assumptions are made in this case?</p>
+<p>d)the required heat in (b) if <span class="math notranslate nohighlight">\(C_p\)</span> is to be used to calculate <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of CoolProp? what assumptions are made in this case?</p>
+</section>
 <section id="solution-approach-for-a">
 <h2>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h2>
 <p>the two knowns to extract thermodynamic properties are</p>
@@ -634,6 +638,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
