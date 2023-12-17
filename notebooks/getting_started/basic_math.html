@@ -181,18 +181,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_1_Pressure_in_a_Tank.html">Pressure in a Tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_2_Density_of_a_Gas.html">Density of a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_3_Energy_in_a_Moving_Vehicle.html">Energy in a Moving Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_4_Enthalpy_of_a_Steam.html">Enthalpy of a Steam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_5_Quality_of_a_Vapor_Mixture.html">Quality of a Vapor Mixture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_6_Compressed_Liquid_Approximation.html">Compressed Liquid Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_7_Conversion_of_Temperature.html">Conversion of Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_8_Specific_Entropy_Calculation.html">Specific Entropy Calculation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/thermo-properties.html">2. Thermodynamic Properties of a Pure Substance</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_1_Pressure_in_a_Tank.html">Pressure in a Tank</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_2_Density_of_a_Gas.html">Density of a Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_3_Energy_in_a_Moving_Vehicle.html">Energy in a Moving Vehicle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_4_Enthalpy_of_a_Steam.html">Enthalpy of a Steam</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_5_Quality_of_a_Vapor_Mixture.html">Quality of a Vapor Mixture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_6_Compressed_Liquid_Approximation.html">Compressed Liquid Approximation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_7_Conversion_of_Temperature.html">Conversion of Temperature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter2/Problem_8_Specific_Entropy_Calculation.html">Specific Entropy Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-water.html">Complete the following table for Water:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-R134a.html">Complete the table: R-134a</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Chapter2/piston-cylinder.html">Piston-cylinder: Isobaric process</a></li>
@@ -235,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q4_v1.2.html">P-h diagram for R-134a refrigerant</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q5.html">Refigeration cycle: R134a Part 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q5.html">Refrigeration cycle: R134a</a></li>
 
 
 
@@ -250,8 +250,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q7.html">Refrigeration cycle: Water flow-rate</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q8.html">Chapter 5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q9.html">Chapter 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q8.html">Multi-evaporator refrigeration system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q9.html">Nozzle: Hydrogen gas</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter6/chapter6.html">6. Entropy and the Second Law of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -583,7 +583,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6285497d60&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6ac3ce8df0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/642f4881db6488054865e83c11b32bece169375a4c3acd18f6d5f7e6c17d193b.png" src="../../_images/642f4881db6488054865e83c11b32bece169375a4c3acd18f6d5f7e6c17d193b.png" />
@@ -597,7 +597,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f628541f9a0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6ac3c6fc10&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/d3bd21d0785762a9f629ceb393d28346185b9b98338d39ba03c9381b3596c28d.png" src="../../_images/d3bd21d0785762a9f629ceb393d28346185b9b98338d39ba03c9381b3596c28d.png" />
@@ -610,9 +610,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.89342128, 0.22409828, 0.97702249, 0.5533418 , 0.72261383,
-       0.63191313, 0.2455794 , 0.588028  , 0.94449222, 0.81295154,
-       0.85673411, 0.98242762, 0.70420093, 0.73077149, 0.63828771])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.88224869, 0.2611845 , 0.66745987, 0.36241878, 0.8074859 ,
+       0.10702141, 0.37823233, 0.61138606, 0.79756628, 0.75525075,
+       0.61947531, 0.38300911, 0.64180422, 0.26302476, 0.25893944])
 </pre></div>
 </div>
 </div>
@@ -624,7 +624,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([59, 83, 54, 95, 99, 89, 88, 75, 55, 65, 76, 68])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([64, 95, 51, 74, 52, 84, 95, 90, 72, 61, 62, 75])
 </pre></div>
 </div>
 </div>
@@ -642,7 +642,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f62b86e7f70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f6af46e0ca0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/23c86f31aa0456a60db1fc341134cdbbe773436b95e1f84a1552570b328da3e9.png" src="../../_images/23c86f31aa0456a60db1fc341134cdbbe773436b95e1f84a1552570b328da3e9.png" />
