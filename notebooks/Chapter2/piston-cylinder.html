@@ -728,6 +728,67 @@ document.write(`
 </table>
 </div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import plotly.graph_objs as go</span>
+<span class="c1"># import pandas as pd</span>
+
+<span class="c1"># # Assuming df is your DataFrame with temperature, vapor, and liquid volumes</span>
+<span class="c1"># df_vapor = pd.DataFrame({</span>
+<span class="c1">#     &#39;Temperature (K)&#39;: T_vals, </span>
+<span class="c1">#     &#39;Specific Volume (m^3/kg)&#39;: vol_vapor</span>
+<span class="c1"># })</span>
+
+<span class="c1"># df_liquid = pd.DataFrame({</span>
+<span class="c1">#     &#39;Temperature (K)&#39;: T_vals, </span>
+<span class="c1">#     &#39;Specific Volume (m^3/kg)&#39;: vol_liquid</span>
+<span class="c1"># })</span>
+
+<span class="c1"># # Create the plot</span>
+<span class="c1"># fig = go.Figure()</span>
+
+<span class="c1"># # Add the liquid line</span>
+<span class="c1"># fig.add_trace(go.Scatter(x=df_liquid[&#39;Specific Volume (m^3/kg)&#39;], y=df_liquid[&#39;Temperature (K)&#39;],</span>
+<span class="c1">#                          mode=&#39;lines&#39;, name=&#39;Liquid&#39;, line=dict(color=&#39;blue&#39;)))</span>
+
+<span class="c1"># # Add the vapor line</span>
+<span class="c1"># fig.add_trace(go.Scatter(x=df_vapor[&#39;Specific Volume (m^3/kg)&#39;], y=df_vapor[&#39;Temperature (K)&#39;],</span>
+<span class="c1">#                          mode=&#39;lines&#39;, name=&#39;Vapor&#39;, line=dict(color=&#39;red&#39;)))</span>
+
+<span class="c1"># # Update layout for log scale on x-axis and axis labels</span>
+<span class="c1"># fig.update_layout(xaxis_type=&quot;log&quot;, xaxis_title=&#39;Specific Volume (m^3/kg)&#39;, yaxis_title=&#39;Temperature (K)&#39;,</span>
+<span class="c1">#                   title=&#39;Temperature vs. Specific Volume&#39;)</span>
+
+<span class="c1"># # Show the plot</span>
+<span class="c1"># fig.show()</span>
+
+<span class="c1"># # Assuming &#39;fig&#39; is your Plotly figure</span>
+<span class="c1"># fig.write_html(&#39;interactive_plot.html&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="c1"># Display the saved HTML file in Jupyter Notebook</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;interactive_plot.html&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="1000"
+            height="500"
+            src="interactive_plot.html"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 <iframe src="./interactive_plot.html" width="700" height="500"></iframe></section>
 </section>
 
