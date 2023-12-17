@@ -58,8 +58,7 @@ parts:
         - file: notebooks/Chapter5/CH5-Q5.ipynb
         - file: notebooks/Chapter5/CH5-Q6.ipynb
         - file: notebooks/Chapter5/CH5-Q7.ipynb
-        - file: notebooks/Chapter5/CH5-Q8.ipynb
         - file: notebooks/Chapter5/CH5-Q9.ipynb
   - file: notebooks/Chapter6/chapter6.md
     sections:
-        - file: notebooks/Chapter6/CH6-Q1.ipynb
+        - file: notebooks/Chapter5/CH5-Q8.ipynb
