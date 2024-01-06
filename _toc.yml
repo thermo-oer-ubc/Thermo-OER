@@ -69,3 +69,11 @@ parts:
         - file: notebooks/Chapter6/CH6-Q5.ipynb
         - file: notebooks/Chapter6/CH6-Q6.ipynb
         - file: notebooks/Chapter6/CH6-Q8.ipynb
+- caption: Interactive Property Diagrams
+  chapters:
+      - file: notebooks/interactive_diagrams/diagrams.md
+        sections:
+            - file: notebooks/interactive_diagrams/T_v_diagrams/p_h.ipynb
+            - file: notebooks/interactive_diagrams/T_v_diagrams/p_v.ipynb
+            - file: notebooks/interactive_diagrams/T_v_diagrams/T_s.ipynb
+            - file: notebooks/interactive_diagrams/T_v_diagrams/T_v.ipynb
