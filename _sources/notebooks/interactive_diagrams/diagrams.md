@@ -2,7 +2,7 @@
 
 The following property diagrams are illustrated for Water, Ammonia and R134a:
 
-- T-v diagram
-- P-v diagram
 - P-h diagram
+- P-v diagram
 - T-s diagram
+- T-v diagram
