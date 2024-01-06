@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
 
     <title>T-s diagrams &#8212; OER Engineering Thermodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,14 +39,16 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -77,6 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -137,13 +148,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../../../_static/text16.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../../_static/text16.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../../_static/text16.png" class="logo__image only-light" alt="OER Engineering Thermodynamics - Home"/>
+    <script>document.write(`<img src="../../../_static/text16.png" class="logo__image only-dark" alt="OER Engineering Thermodynamics - Home"/>`);</script>
   
   
 </a></div>
@@ -252,9 +264,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Property Diagrams</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Diagrams</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../diagrams.html">Interactive Property diagrams</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../diagrams.html">Property Diagrams</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="p_h.html">P-h diagrams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="p_v.html">P-v diagrams</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">T-s diagrams</a></li>
@@ -416,10 +428,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -427,11 +439,13 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -447,6 +461,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks:</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -458,56 +480,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="t-s-diagrams">
 <h1>T-s diagrams<a class="headerlink" href="#t-s-diagrams" title="Permalink to this heading">#</a></h1>
+<section id="tasks">
+<h2>Tasks:<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Zoom in and use the cursor to inspect the values of x and y-axes.</p></li>
+<li><p>Inspect the critical values of the diagrams below for the three fluids</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
-
-
-<span class="n">fluids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Water&#39;</span><span class="p">,</span> <span class="s1">&#39;Ammonia&#39;</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">fluid</span> <span class="ow">in</span> <span class="n">fluids</span><span class="p">:</span>
-    <span class="n">T_min</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;Tmin&#39;</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>  <span class="c1"># Adding a small offset to Tmin</span>
-    <span class="n">T_max</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;Tcrit&#39;</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>
-    <span class="n">T_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">T_min</span><span class="p">,</span> <span class="n">T_max</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Number of points</span>
-
-    <span class="n">t_s_liquid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;Entropy Liquid (J/kg.K)&#39;</span><span class="p">:</span> <span class="p">[]}</span>
-    <span class="n">t_s_vapor</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;Entropy Vapor (J/kg.K)&#39;</span><span class="p">:</span> <span class="p">[]}</span>
-
-    <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">T_vals</span><span class="p">:</span>
-        <span class="n">s_liquid</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>  <span class="c1"># Saturated liquid</span>
-        <span class="n">s_vapor</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>  <span class="c1"># Saturated vapor</span>
-        <span class="n">t_s_liquid</span><span class="p">[</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-        <span class="n">t_s_liquid</span><span class="p">[</span><span class="s1">&#39;Entropy Liquid (J/kg.K)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s_liquid</span><span class="p">)</span>
-        <span class="n">t_s_vapor</span><span class="p">[</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-        <span class="n">t_s_vapor</span><span class="p">[</span><span class="s1">&#39;Entropy Vapor (J/kg.K)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s_vapor</span><span class="p">)</span>
-
-    <span class="c1"># Save to CSV</span>
-    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">t_s_liquid</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fluid</span><span class="si">}</span><span class="s1">_T_s_liquid.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">t_s_vapor</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fluid</span><span class="si">}</span><span class="s1">_T_s_vapor.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-
-<span class="k">for</span> <span class="n">fluid</span> <span class="ow">in</span> <span class="n">fluids</span><span class="p">:</span>
-    <span class="n">df_liquid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fluid</span><span class="si">}</span><span class="s1">_T_s_liquid.csv&#39;</span><span class="p">)</span>
-    <span class="n">df_vapor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fluid</span><span class="si">}</span><span class="s1">_T_s_vapor.csv&#39;</span><span class="p">)</span>
-
-    <span class="c1"># Creating Plotly plot</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_liquid</span><span class="p">[</span><span class="s1">&#39;Entropy Liquid (J/kg.K)&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_liquid</span><span class="p">[</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">],</span>
-                             <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Saturated Liquid&#39;</span><span class="p">))</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_vapor</span><span class="p">[</span><span class="s1">&#39;Entropy Vapor (J/kg.K)&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_vapor</span><span class="p">[</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">],</span>
-                             <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Saturated Vapor&#39;</span><span class="p">))</span>
-
-    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fluid</span><span class="si">}</span><span class="s1"> T-s Diagram&#39;</span><span class="p">,</span> 
-                      <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Entropy (J/kg.K)&#39;</span><span class="p">,</span> <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">)</span>
-
-    <span class="c1"># Save as HTML</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fluid</span><span class="si">}</span><span class="s1">_T_s_plot.html&#39;</span><span class="p">)</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
 
 <span class="n">display</span><span class="p">(</span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;Water_T_s_plot.html&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;Ammonia_T_s_plot.html&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">))</span>
@@ -546,6 +527,7 @@ document.write(`
         </div></div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -572,11 +554,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="p_v.html"
@@ -596,15 +577,26 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -648,8 +640,8 @@ By Faculty of Applied Science, UBC licensed under <a href="https://creativecommo
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
