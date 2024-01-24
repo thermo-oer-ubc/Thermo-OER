@@ -2,7 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 #
 
+
 sphinx:
+  extra_extensions: [sphinx_multitoc_numbering, sphinx_togglebutton]
   html_context:
     default_mode: light
 

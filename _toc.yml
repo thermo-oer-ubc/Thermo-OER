@@ -68,6 +68,7 @@ parts:
         - file: notebooks/Chapter6/CH6-Q4.ipynb
         - file: notebooks/Chapter6/CH6-Q5.ipynb
         - file: notebooks/Chapter6/CH6-Q6.ipynb
+        - file: notebooks/Chapter6/CH6-Q7.ipynb
         - file: notebooks/Chapter6/CH6-Q8.ipynb
 - caption: Interactive Diagrams
   chapters:
