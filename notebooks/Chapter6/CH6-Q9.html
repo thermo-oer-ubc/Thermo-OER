@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>T-s diagram for Water &#8212; OER Engineering Thermodynamics</title>
+    <title>Air in rigid tank: two compartments &#8212; OER Engineering Thermodynamics</title>
   
   
   
@@ -66,11 +66,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter6/CH6-Q5';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter6/CH6-Q9';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Entropy change in Rigid tank" href="CH6-Q6.html" />
-    <link rel="prev" title="Heat engine and refigeration cycle" href="CH6-Q4.html" />
+    <link rel="next" title="Property Diagrams" href="../interactive_diagrams/diagrams.html" />
+    <link rel="prev" title="Entropy generation: Polytropic compression of Air" href="CH6-Q8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -261,11 +261,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q2.html">Rankine Cycle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q3.html">Refrigeration/ heat pump system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q4.html">Heat engine and refigeration cycle</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">T-s diagram for Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q5.html">T-s diagram for Water</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q6.html">Entropy change in Rigid tank</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q7.html">Entropy generation: steam in Piston-cyclinder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q8.html">Entropy generation: Polytropic compression of Air</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CH6-Q9.html">Air in rigid tank: two compartments</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Air in rigid tank: two compartments</a></li>
 </ul>
 </li>
 </ul>
@@ -349,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter6/CH6-Q5.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter6/CH6-Q9.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +379,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/Chapter6/CH6-Q5.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/Chapter6/CH6-Q9.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -461,7 +461,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>T-s diagram for Water</h1>
+    <h1>Air in rigid tank: two compartments</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -471,7 +471,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
 </ul>
             </nav>
         </div>
@@ -483,66 +487,160 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="t-s-diagram-for-water">
-<h1>T-s diagram for Water<a class="headerlink" href="#t-s-diagram-for-water" title="Permalink to this heading">#</a></h1>
-<section id="problem-statement">
-<h2>Problem statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
-<p>Build a T-s diagram for water. Plot a constant pressure curve equal to <span class="math notranslate nohighlight">\(P=5\:MPa\)</span> and a constant specific volume cure equal to <span class="math notranslate nohighlight">\(v=1\:m^3/kg\)</span> on the diagram.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="air-in-rigid-tank-two-compartments">
+<h1>Air in rigid tank: two compartments<a class="headerlink" href="#air-in-rigid-tank-two-compartments" title="Permalink to this heading">#</a></h1>
+<p>A rigid tank contains air in two compartments. Compartment A containg <span class="math notranslate nohighlight">\(1\:kg\)</span> of air at <span class="math notranslate nohighlight">\(P_A=200\:kPa\)</span> and compartment B contains <span class="math notranslate nohighlight">\(3\:kg\)</span> of air at <span class="math notranslate nohighlight">\(P_B=50\:kPa\)</span>. The tank is in thermal equilibrium with the surrounding at <span class="math notranslate nohighlight">\(T=25^{\circ} C\)</span>. The middle divider is then removed redulting in air in two compartments being mixed and filling the whole tank. Assuming the temperature remains constant calculate:</p>
+<p>a) final pressure assuming ideal gas</p>
+<p>b) entropy generation assuming ideal gas</p>
+<p>c) final pressure using CoolProp module</p>
+<p>d) entropy generation using CoolProp module</p>
+<p>e) error of entropy generation for ideal gas assumption</p>
+<p><img alt="CH6-Q9.jpg" src="../../_images/CH6-Q9.png" /></p>
+<section id="solution-approach-for-a">
+<h2>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h2>
+<p>from ideal gas law</p>
+<p><span class="math notranslate nohighlight">\(V_{A,B}=m_{A,B}RT/P_{A,B}\)</span></p>
+<p>for the tank</p>
+<p><span class="math notranslate nohighlight">\(V=V_A+V_B\)</span></p>
+<p><span class="math notranslate nohighlight">\(m=m_A+m_B\)</span></p>
+<p><span class="math notranslate nohighlight">\(T=25^{\circ} C\)</span></p>
+<p>to calculate final pressre from ideal gas assumption</p>
+<p><span class="math notranslate nohighlight">\(P=mRT/V\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the libraries we&#39;ll need</span>
-<span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define variables</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.287</span>   <span class="c1">#air gas constant in kJ/kg.K</span>
+<span class="n">C_v</span> <span class="o">=</span> <span class="mf">0.718</span>   <span class="c1">#air specific heat in constant colume kJ/kg.K</span>
+<span class="n">C_p</span> <span class="o">=</span> <span class="mf">1.005</span>   <span class="c1">#air specific heat in constant pressure kJ/kg.K</span>
 
-<span class="c1"># define variables</span>
-<span class="n">fluid</span> <span class="o">=</span> <span class="s2">&quot;water&quot;</span>  <span class="c1"># define the fluid or material of interest, for full list see CP.Fluidslist()</span>
-<span class="n">T_min</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;Tmin&quot;</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>  <span class="c1"># triple-point temp for the fluid in K</span>
-<span class="n">T_crit</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;Tcrit&quot;</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#critical point temperature in K</span>
-<span class="n">T_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">T_min</span><span class="p">,</span> <span class="n">T_crit</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>  <span class="c1"># define an array of values for temperature</span>
+<span class="n">m_A</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c1">#air mass at compartment A in kg</span>
+<span class="n">m_B</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c1">#air mass at compartment B in kg</span>
 
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># define the fluid quality as 1, which is 100% vapor</span>
+<span class="n">P_A</span> <span class="o">=</span> <span class="mi">200</span>   <span class="c1">#air pressure in compartment A in kPa</span>
+<span class="n">P_B</span> <span class="o">=</span> <span class="mi">50</span>   <span class="c1">#air pressure in compartment A in kPa</span>
 
-<span class="n">entropy</span> <span class="o">=</span> <span class="p">[</span><span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">T_vals</span><span class="p">]</span>  <span class="c1"># call for entropy values using CoolProp</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#ambient and system temperature in K</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">entropy</span><span class="p">,</span> <span class="n">T_vals</span><span class="p">,</span> <span class="s2">&quot;-b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Saturation Line&quot;</span><span class="p">)</span>  <span class="c1"># plot pressure vs enthalpy</span>
+<span class="n">V_A</span> <span class="o">=</span> <span class="n">m_A</span> <span class="o">*</span> <span class="n">R</span>  <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">P_A</span>   <span class="c1">#volume of compartment A in m3</span>
+<span class="n">V_B</span> <span class="o">=</span> <span class="n">m_B</span> <span class="o">*</span> <span class="n">R</span>  <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">P_B</span>   <span class="c1">#volume of compartment B in m3</span>
 
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># define the fluid quality as 0, which is 100% liquid</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">V_A</span> <span class="o">+</span> <span class="n">V_B</span>              <span class="c1">#total volume in m3</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">m_A</span> <span class="o">+</span> <span class="n">m_B</span>              <span class="c1">#total mass in kg</span>
 
-<span class="n">entropy</span> <span class="o">=</span> <span class="p">[</span><span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">T_vals</span><span class="p">]</span>  <span class="c1"># call for entropy values using CoolProp</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">V</span>   <span class="c1">#final pressure of mixture in kPa</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">entropy</span><span class="p">,</span> <span class="n">T_vals</span><span class="p">,</span> <span class="s2">&quot;-b&quot;</span><span class="p">)</span>  <span class="c1"># plot pressure vs enthalpy</span>
-
-<span class="c1"># constant pressure</span>
-<span class="n">P</span> <span class="o">=</span> <span class="mf">5e+6</span>   <span class="c1">#constant pressure in Pa</span>
-<span class="n">T_max</span> <span class="o">=</span> <span class="mi">650</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#max temperature for plotting</span>
-
-<span class="n">T_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">T_min</span><span class="p">,</span> <span class="n">T_max</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>  <span class="c1"># define an array of values for temperature</span>
-
-<span class="n">entropy</span> <span class="o">=</span> <span class="p">[</span><span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">T_vals</span><span class="p">]</span>  <span class="c1"># call for entropy values using CoolProp</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">entropy</span><span class="p">,</span> <span class="n">T_vals</span><span class="p">,</span> <span class="s2">&quot;--r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;P=5 MPa&quot;</span><span class="p">)</span>  <span class="c1"># plot pressure vs enthalpy</span>
-
-<span class="c1">#constant volume</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">#constant volume m3/kg</span>
-<span class="n">D</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">v</span>   <span class="c1">#density kg/m3</span>
-
-<span class="n">entropy</span> <span class="o">=</span> <span class="p">[</span><span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">T_vals</span><span class="p">]</span>  <span class="c1"># call for entropy values using CoolProp</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">entropy</span><span class="p">,</span> <span class="n">T_vals</span><span class="p">,</span> <span class="s2">&quot;--g&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;v=1 m3/kg&quot;</span><span class="p">)</span>  <span class="c1"># plot pressure vs enthalpy</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature [K]&quot;</span><span class="p">)</span>  <span class="c1"># give y axis a label</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Entropy [kJ/kgK]&quot;</span><span class="p">)</span>  <span class="c1"># give x axis a label</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The final pressure of the mixture assuming ideal gas is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">P</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kPa&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f1471c84dc0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The final pressure of the mixture assuming ideal gas is: 61.5 kPa
 </pre></div>
 </div>
-<img alt="../../_images/9c4aa380185dc41f9eaa4aaec0a2fdcddc4ac4432c74666e893158c46f1cbecb.png" src="../../_images/9c4aa380185dc41f9eaa4aaec0a2fdcddc4ac4432c74666e893158c46f1cbecb.png" />
+</div>
+</div>
+</section>
+<section id="solution-approach-for-b">
+<h2>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\Delta s=q/T+s_{gen}\)</span></p>
+<p>from first law</p>
+<p><span class="math notranslate nohighlight">\(q=\Delta u+w\)</span></p>
+<p>since the boundaries of the system are fixed (<span class="math notranslate nohighlight">\(w\)</span>) and also the temperature remains constant (<span class="math notranslate nohighlight">\(\Delta u\)</span>), heat transfer for the process is negligible</p>
+<p><span class="math notranslate nohighlight">\(q=0\)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\(s_{gen}=\Delta s\)</span></p>
+<p>for an ideal gas</p>
+<p><span class="math notranslate nohighlight">\(s_2-s_1=C_pln(T_2/T_1)-Rln(P_2/P_1)\)</span></p>
+<p>since <span class="math notranslate nohighlight">\(T_2=T_1\)</span></p>
+<p><span class="math notranslate nohighlight">\(s_2-s_1=-Rln(P_2/P_1)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the libraries we&#39;ll need</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">ds_A</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">P</span><span class="o">/</span><span class="n">P_A</span><span class="p">)</span>
+<span class="n">ds_B</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">P</span><span class="o">/</span><span class="n">P_B</span><span class="p">)</span>
+<span class="n">ds_total</span> <span class="o">=</span> <span class="n">m_A</span> <span class="o">*</span> <span class="n">ds_A</span> <span class="o">+</span> <span class="n">m_B</span> <span class="o">*</span> <span class="n">ds_B</span>   <span class="c1">#changes in entropy calculated and summed up seperately for A and B</span>
+<span class="n">S_gen_ideal</span> <span class="o">=</span> <span class="n">ds_total</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The entropy generation based on ideal gas assumption is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen_ideal</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kJ/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The entropy generation based on ideal gas assumption is: 0.159 kJ/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-c">
+<h2>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Permalink to this heading">#</a></h2>
+<p>same rules for the tank applies except ideal gas equation. Therefore, air properties obtained from CoolProp are used to obtain final pressure</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
+<span class="n">fluid</span> <span class="o">=</span> <span class="s2">&quot;air&quot;</span>  <span class="c1"># define the fluid or material of interest</span>
+
+<span class="n">D_A</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_A</span> <span class="o">*</span> <span class="mi">1000</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#fluid density at compartment A in kg/m3</span>
+<span class="n">D_B</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_B</span> <span class="o">*</span> <span class="mi">1000</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#fluid density at compartment B in kg/m3</span>
+
+<span class="n">V_A</span> <span class="o">=</span> <span class="n">m_A</span> <span class="o">/</span> <span class="n">D_A</span>   <span class="c1">#fluid volume at compartment A in m3</span>
+<span class="n">V_B</span> <span class="o">=</span> <span class="n">m_B</span> <span class="o">/</span> <span class="n">D_B</span>   <span class="c1">#fluid volume at compartment A in m3</span>
+
+<span class="n">V</span> <span class="o">=</span> <span class="n">V_A</span> <span class="o">+</span> <span class="n">V_B</span>              <span class="c1">#total volume in m3</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">m_A</span> <span class="o">+</span> <span class="n">m_B</span>              <span class="c1">#total mass in kg</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span> <span class="n">V</span>                  <span class="c1">#final density in kg/m3</span>
+
+<span class="n">P_clp</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#fluid pressure after mixture in Pa</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The final pressure of the mixture using CoolProp is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">P_clp</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kPa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The final pressure of the mixture using CoolProp is: 61.5 kPa
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-d">
+<h2>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Permalink to this heading">#</a></h2>
+<p>Fluid properties obtained from CoolProp are to be used instead of equations based on ideal gas assumption to calculate changes in entropy</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_A</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_A</span> <span class="o">*</span> <span class="mi">1000</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#fluid entropy at compartment A in J/kg.K</span>
+<span class="n">s_B</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_B</span> <span class="o">*</span> <span class="mi">1000</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#fluid entropy at compartment B in J/kg.K</span>
+<span class="n">s_mix</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_clp</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#fluid entropy after mixture in J/kg.K</span>
+
+<span class="n">ds_total</span> <span class="o">=</span> <span class="n">m_A</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_mix</span> <span class="o">-</span> <span class="n">s_A</span><span class="p">)</span> <span class="o">+</span> <span class="n">m_B</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_mix</span> <span class="o">-</span> <span class="n">s_B</span><span class="p">)</span>   <span class="c1">#changes in entropy calculated and summed up seperately for A and B in J/K</span>
+<span class="n">S_gen_clp</span> <span class="o">=</span> <span class="n">ds_total</span>   <span class="c1">#entropy generation in J/K</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The entropy generation using CoolProp is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen_clp</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kJ/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The entropy generation using CoolProp is: 0.160 kJ/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-e">
+<h2>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">((</span><span class="n">S_gen_clp</span><span class="o">/</span><span class="mi">1000</span> <span class="o">-</span> <span class="n">S_gen_ideal</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">S_gen_clp</span><span class="o">/</span><span class="mi">1000</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The error percentage for ideal gas assumption in calculating entropy generation is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">E</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The error percentage for ideal gas assumption in calculating entropy generation is: 0.46 %
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -579,20 +677,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="CH6-Q4.html"
+       href="CH6-Q8.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Heat engine and refigeration cycle</p>
+        <p class="prev-next-title">Entropy generation: Polytropic compression of Air</p>
       </div>
     </a>
     <a class="right-next"
-       href="CH6-Q6.html"
+       href="../interactive_diagrams/diagrams.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Entropy change in Rigid tank</p>
+        <p class="prev-next-title">Property Diagrams</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -611,7 +709,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
 </ul>
   </nav></div>
 
