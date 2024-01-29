@@ -62,7 +62,7 @@ parts:
   - file: notebooks/Chapter6/chapter6.md
     sections:
         - file: notebooks/Chapter6/CH5-Q8.ipynb
-        - file: notebooks/Chapter6/CH5-Q10.ipynb
+        - file: notebooks/Chapter6/CH6-Q0.ipynb
         - file: notebooks/Chapter6/CH6-Q2.ipynb
         - file: notebooks/Chapter6/CH6-Q3.ipynb
         - file: notebooks/Chapter6/CH6-Q4.ipynb
