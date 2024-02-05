@@ -11,7 +11,7 @@ sphinx:
 title: OER Engineering Thermodynamics
 author: Faculty of Applied Science, UBC licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">[CC-BY-SA 4.0]</a>
 copyright: "2024"
-logo: text16.png
+logo: drawing.png
 
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", LICENSE.md]
 
