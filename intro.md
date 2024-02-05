@@ -1,4 +1,4 @@
-# Open Education Resources(OER): Introduction to Engineering Thermodynamics
+# Open Education Resources (OER): Introduction to Engineering Thermodynamics
 
 This is a project that extends the original e-textbook written by Dr. Claire Yu Yan in UBC Okanagan campus:[Introduction to Engineering Thermodynamics](https://pressbooks.bccampus.ca/thermo1). The main goals for this project are as follows:
 
