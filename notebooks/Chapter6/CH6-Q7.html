@@ -155,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Open Education Resources(OER): Introduction to Engineering Thermodynamics
+                    Open Education Resources (OER): Introduction to Engineering Thermodynamics
                 </a>
             </li>
         </ul>
@@ -254,6 +254,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Entropy generation: steam in Piston-cyclinder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q8.html">Entropy generation: Polytropic compression of Air</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH6-Q9.html">Air in rigid tank: two compartments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q10.html">Second Law for an Open Turbine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q11.html">Second Law for a Refrigration Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q12.html">Entropy in a heated rigid tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q13.html">Entropy Generation for a Steam Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q14.html">Detailed Entropy Generation for a Steam Cycle</a></li>
 </ul>
 </li>
 </ul>
@@ -459,12 +464,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution Approach for e)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution Approach for e)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -478,6 +486,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="entropy-generation-steam-in-piston-cyclinder">
 <h1>Entropy generation: steam in Piston-cyclinder<a class="headerlink" href="#entropy-generation-steam-in-piston-cyclinder" title="Permalink to this heading">#</a></h1>
+<section id="problem-statement">
+<h2>Problem Statement:<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
 <p><span class="math notranslate nohighlight">\(1\:kg\)</span> of water is stored in a piston-cylinder system at its saturated liquid state at <span class="math notranslate nohighlight">\(T=100^{\circ} C\)</span>. The system is then heated resulting in the piston moving up till the piston hits the maximum-capacity point at <span class="math notranslate nohighlight">\(V=0.5\:m^3\)</span> and stops moving. Heating is then continued untill water temperature reaches <span class="math notranslate nohighlight">\(T=200^{\circ} C\)</span>. Determine,</p>
 <p>a) the final pressure of water</p>
 <p>b) boundary work</p>
@@ -487,7 +497,7 @@ document.write(`
 <p>f) plot the process on a T-s diagram</p>
 <p><img alt="CH6-Q7.png" src="../../_images/CH6-Q7.png" /></p>
 <section id="solution-approach-for-a">
-<h2>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h2>
+<h3>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h3>
 <p>Lets number the initial state as (1), the point where the piston hits max capacity (2) and the final state as (3).</p>
 <p>The volume (and specific volume) of water remains constant after reaching the maximum point, therefore</p>
 <p><span class="math notranslate nohighlight">\(D_3=D_2\)</span></p>
@@ -520,7 +530,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-b">
-<h2>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h2>
+<h3>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h3>
 <p>boundary work from (2) to (3) is zero since the boundary is fixed. The process (1) to (2) is constant pressure, therefore</p>
 <p><span class="math notranslate nohighlight">\(W=P(\Delta V)\)</span></p>
 <div class="cell docutils container">
@@ -544,7 +554,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-c">
-<h2>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Permalink to this heading">#</a></h2>
+<h3>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Permalink to this heading">#</a></h3>
 <p>from the first law</p>
 <p><span class="math notranslate nohighlight">\(Q=\Delta U + W\)</span></p>
 <div class="cell docutils container">
@@ -566,7 +576,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-d">
-<h2>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Permalink to this heading">#</a></h2>
+<h3>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Permalink to this heading">#</a></h3>
 <p>total entropy change would be</p>
 <p><span class="math notranslate nohighlight">\(\Delta S=m(s_3-s_1)\)</span></p>
 <div class="cell docutils container">
@@ -587,7 +597,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-e">
-<h2>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Permalink to this heading">#</a></h2>
+<h3>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Permalink to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(\Delta S=Q/T+S_{gen}\)</span></p>
 <p>so</p>
 <p><span class="math notranslate nohighlight">\(S_{gen}=\Delta S-Q/T_s\)</span></p>
@@ -607,7 +617,7 @@ document.write(`
 </div>
 </section>
 <section id="id1">
-<h2>Solution Approach for e)<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h3>Solution Approach for e)<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>The code at Q#5 of this chapter is used here</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -666,6 +676,7 @@ document.write(`
 <img alt="../../_images/4bd537452126eecb2c2e5527d4c46fadf9beae841a35e4682cb95c699ce6cd66.png" src="../../_images/4bd537452126eecb2c2e5527d4c46fadf9beae841a35e4682cb95c699ce6cd66.png" />
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -736,12 +747,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution Approach for e)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution Approach for e)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
