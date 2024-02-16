@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Isochoric Process for a Gas &#8212; OER Engineering Thermodynamics</title>
+    <title>Question #9: Polytropic Tire Deflation &#8212; OER Engineering Thermodynamics</title>
   
   
   
@@ -62,11 +62,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter4/Isochoric_Process_Problem_3';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter4/CH4-Q9';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Adiabatic Compression of an Ideal Gas" href="Adiabatic_Compression_Problem_4.html" />
-    <link rel="prev" title="Piston-cylinder: isothermal expansion" href="Thermodynamics_Example_2.html" />
+    <link rel="next" title="5. The First Law of Thermodynamics for a Control Volume" href="../Chapter5/chapter5.html" />
+    <link rel="prev" title="Comparison of work done in different processes" href="Polytropic_Processes_Problem_Extended.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -205,7 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="first-law.html">4. The First Law of Thermodynamics for Closed Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Thermodynamics_Example_2.html">Piston-cylinder: isothermal expansion</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Isochoric Process for a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Isochoric_Process_Problem_3.html">Isochoric Process for a Gas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Adiabatic_Compression_Problem_4.html">Adiabatic Compression of an Ideal Gas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Heat_Transfer_Rigid_Container_Problem_5.html">Heat Transfer in a Rigid Container</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Helium_Spring_Loaded_Cylinder_Problem_6.html">Helium in a Spring-Loaded Cylinder</a></li>
@@ -216,7 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="use_different_references_in_CoolProp.html">Reference States in Thermodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Polytropic_Processes_Problem_Extended.html">Comparison of work done in different processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CH4-Q9.html">Question #9: Polytropic Tire Deflation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Question #9: Polytropic Tire Deflation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/chapter5.html">5. The First Law of Thermodynamics for a Control Volume</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -343,7 +345,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter4/Isochoric_Process_Problem_3.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter4/CH4-Q9.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -373,7 +375,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/Chapter4/Isochoric_Process_Problem_3.md" target="_blank"
+      <li><a href="../../_sources/notebooks/Chapter4/CH4-Q9.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +385,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -455,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Isochoric Process for a Gas</h1>
+    <h1>Question #9: Polytropic Tire Deflation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -465,8 +467,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
 </ul>
             </nav>
         </div>
@@ -478,57 +482,109 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="isochoric-process-for-a-gas">
-<h1>Isochoric Process for a Gas<a class="headerlink" href="#isochoric-process-for-a-gas" title="Permalink to this heading">#</a></h1>
-<section id="problem-statement">
-<h2>Problem Statement:<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
-<p>Consider a container with a fixed volume of 0.3 m³ that initially contains helium gas at a temperature of 15°C
-and a pressure of 100 kPa. The gas undergoes an isochoric (constant volume) heating process until its pressure triples.
-Calculate:</p>
-<ol class="arabic simple">
-<li><p>The final temperature of the helium gas.</p></li>
-<li><p>The change in internal energy of the gas during this process, assuming the specific heat at constant volume (Cv) is known.</p></li>
-<li><p>The total heat transfer to the helium gas.</p></li>
-</ol>
-<p>Use the ideal gas law and assume helium behaves as an ideal gas.</p>
-</section>
-<section id="solution">
-<h2>Solution:<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
+  <section id="question-9-polytropic-tire-deflation">
+<h1>Question #9: Polytropic Tire Deflation<a class="headerlink" href="#question-9-polytropic-tire-deflation" title="Permalink to this heading">#</a></h1>
+<p>Have you ever let the air out of a bike tire. Does the valve feel cold?</p>
+<p>Consider a bike tire with a volume of <span class="math notranslate nohighlight">\(V=1.5\:L\)</span> pressurized to a recommended guage pressure of <span class="math notranslate nohighlight">\(P_g=800\:kPa\)</span>. The tire is sitting in atmospheric pressure <span class="math notranslate nohighlight">\(P_a=101\:kPa\)</span> and temperature <span class="math notranslate nohighlight">\(T_a=25\degree C\)</span>. The tire is then depressurized using a valve where air goes through a polytropic expansion with a constant <span class="math notranslate nohighlight">\(n=1.3\)</span> from tire pressure to atmospheric pressure. Assuming ideal gas application, calculate:</p>
+<p>a) the total mass of air stored in the tire</p>
+<p>b) the specific volume of air inside the tire</p>
+<p>c) the specific volume of depressurized air after the expansion</p>
+<p>d) temperature of air after expansion</p>
+<p><img alt="CH4-Q9.jpg" src="../../_images/CH4-Q9.png" /></p>
+<section id="solution-approach-for-a">
+<h2>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h2>
+<p>based on ideal gas assumption,</p>
+<p><span class="math notranslate nohighlight">\(PV=mRT\)</span></p>
+<p>so</p>
+<p><span class="math notranslate nohighlight">\(m=PV/(RT)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
-<span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define variables</span>
+<span class="n">P_g</span> <span class="o">=</span> <span class="mf">800E+3</span>   <span class="c1">#tire guage pressure in Pa</span>
+<span class="n">P_a</span> <span class="o">=</span> <span class="mf">101E+3</span>   <span class="c1">#atmospheric pressure in Pa</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mf">1.5E-3</span>   <span class="c1">#tire volume in m3</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#temperarture in K</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mi">287</span>   <span class="c1">#air gas constant in J/kgK</span>
 
-<span class="c1"># Given values</span>
-<span class="n">V</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># Volume in m^3</span>
-<span class="n">T1</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">+</span> <span class="mf">273.15</span>  <span class="c1"># Initial temperature in Kelvin</span>
-<span class="n">P1</span> <span class="o">=</span> <span class="mi">100000</span>  <span class="c1"># Initial pressure in Pa (100 kPa)</span>
-<span class="n">P2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">P1</span>  <span class="c1"># Final pressure (tripled)</span>
-<span class="n">gas</span> <span class="o">=</span> <span class="s1">&#39;Helium&#39;</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">P_a</span> <span class="o">+</span> <span class="n">P_g</span>   <span class="c1">#absolute pressure in Pa</span>
 
-<span class="c1"># 1. Final Temperature (T2)</span>
-<span class="c1"># Since the process is isochoric, P1/T1 = P2/T2 (Ideal Gas Law)</span>
-<span class="n">T2</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">/</span> <span class="n">P1</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">V</span> <span class="o">/</span> <span class="p">(</span><span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span>   <span class="c1">#mass of air stored in the tire in kg</span>
 
-<span class="c1"># 2. Change in internal energy (Δu)</span>
-<span class="n">Cv</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;Cvmass&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="n">gas</span><span class="p">)</span>  <span class="c1"># Cv for helium</span>
-<span class="n">delta_u</span> <span class="o">=</span> <span class="n">Cv</span> <span class="o">*</span> <span class="p">(</span><span class="n">T2</span> <span class="o">-</span> <span class="n">T1</span><span class="p">)</span>
-
-<span class="c1"># 3. Total heat transfer (Q)</span>
-<span class="c1"># For an isochoric process, Q = Δu (First Law of Thermodynamics)</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="n">delta_u</span>
-
-<span class="c1"># Output the results</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Final Temperature (T2): </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">T2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2"> K&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Change in internal energy (Δu): </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">delta_u</span><span class="o">/</span><span class="mf">1e3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2"> kJ&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total heat transfer (Q): </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">Q</span><span class="o">/</span><span class="mf">1e3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2"> kJ&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of air stored is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final Temperature (T2): 864.5 K
-Change in internal energy (Δu): 1795.8 kJ
-Total heat transfer (Q): 1795.8 kJ
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of air stored is: 0.016 kg
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-b">
+<h2>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h2>
+<p>specific volume is calculated as</p>
+<p><span class="math notranslate nohighlight">\(v=V/m\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">V</span> <span class="o">/</span> <span class="n">m</span>   <span class="c1">#specific volume of air in m3/kg</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The specific volume of the stored air is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;m3/kg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The specific volume of the stored air is: 0.095 m3/kg
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-c">
+<h2>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Permalink to this heading">#</a></h2>
+<p>for a polytropic process</p>
+<p><span class="math notranslate nohighlight">\(Pv^n=constant\)</span></p>
+<p>so</p>
+<p><span class="math notranslate nohighlight">\(P_1v_1^n=P_2v_2^n\)</span></p>
+<p>therfore</p>
+<p><span class="math notranslate nohighlight">\(v_2=v_1\times (P_1/P_2)^{(1/n)}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mf">1.3</span>   <span class="c1">#polytropic constant</span>
+
+<span class="n">v_1</span> <span class="o">=</span> <span class="n">v</span>   <span class="c1">#specific volume of air before expansion in m3/kg</span>
+<span class="n">P_1</span> <span class="o">=</span> <span class="n">P</span>   <span class="c1">#pressure of air before expansion in Pa</span>
+<span class="n">P_2</span> <span class="o">=</span> <span class="n">P_a</span>   <span class="c1">#pressure of air after expansion in Pa</span>
+
+<span class="n">v_2</span> <span class="o">=</span> <span class="n">v_1</span> <span class="o">*</span> <span class="p">(</span><span class="n">P_1</span> <span class="o">/</span> <span class="n">P_2</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>   <span class="c1">#specific volume of air after expansion</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The specific volume of air after expansion is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v_2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;m3/kg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The specific volume of air after expansion is: 0.511 m3/kg
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-d">
+<h2>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Permalink to this heading">#</a></h2>
+<p>for an ideal gas,</p>
+<p><span class="math notranslate nohighlight">\(Pv=RT\)</span></p>
+<p>therefore</p>
+<p><span class="math notranslate nohighlight">\(T=Pv/R\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="n">P_2</span> <span class="o">*</span> <span class="n">v_2</span> <span class="o">/</span> <span class="n">R</span>   <span class="c1">#temperature of air after expansion in K</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The temperature of air after expansion is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">T</span><span class="o">-</span><span class="mf">273.15</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The temperature of air after expansion is: -93.2 C
 </pre></div>
 </div>
 </div>
@@ -568,20 +624,20 @@ Total heat transfer (Q): 1795.8 kJ
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Thermodynamics_Example_2.html"
+       href="Polytropic_Processes_Problem_Extended.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Piston-cylinder: isothermal expansion</p>
+        <p class="prev-next-title">Comparison of work done in different processes</p>
       </div>
     </a>
     <a class="right-next"
-       href="Adiabatic_Compression_Problem_4.html"
+       href="../Chapter5/chapter5.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Adiabatic Compression of an Ideal Gas</p>
+        <p class="prev-next-title">5. The First Law of Thermodynamics for a Control Volume</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -603,8 +659,10 @@ Total heat transfer (Q): 1795.8 kJ
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
 </ul>
   </nav></div>
 
