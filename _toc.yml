@@ -36,6 +36,8 @@ parts:
         - file: notebooks/Chapter3/CH3-Q4_v1.ipynb
         - file: notebooks/Chapter3/CH3-Q5_v1.ipynb
         - file: notebooks/Chapter3/CH3-Q6_v1.ipynb
+        - file: notebooks/Chapter3/CH3-Q7.ipynb
+        - file: notebooks/Chapter3/CH3-Q8.ipynb
   - file: notebooks/Chapter4/first-law.md
     sections:
         #- file: notebooks/Chapter4/Thermodynamics_Example_1.md
@@ -49,6 +51,7 @@ parts:
         - file: notebooks/Chapter4/linear-interpolation-nternal-energy.ipynb
         - file: notebooks/Chapter4/use_different_references_in_CoolProp.ipynb
         - file: notebooks/Chapter4/Polytropic_Processes_Problem_Extended.ipynb
+        - file: notebooks/Chapter4/CH4-Q9.ipynb
   - file: notebooks/Chapter5/chapter5.md
     sections:
         - file: notebooks/Chapter5/CH5-Q1.ipynb  
