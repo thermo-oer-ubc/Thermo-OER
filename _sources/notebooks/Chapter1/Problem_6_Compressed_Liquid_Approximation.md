@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Compressed Liquid Approximation
+# 6. Compressed Liquid Approximation
 
 ## Problem Statement:
 For water at 50°C under high pressure, approximate the specific volume, internal energy, enthalpy, and entropy 

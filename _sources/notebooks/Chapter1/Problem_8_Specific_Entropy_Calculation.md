@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Specific Entropy Calculation
+# 8. Specific Entropy Calculation
 
 ## Problem Statement:
 Calculate the specific entropy of a system with a total entropy of 2500 J/K and a mass of 10 kg.
