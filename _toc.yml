@@ -23,8 +23,8 @@ parts:
         - file: notebooks/Chapter1/Problem_8_Specific_Entropy_Calculation.md
   - file: notebooks/Chapter2/thermo-properties.md
     sections:
-          #- file: notebooks/Chapter2/complete-table-ammonia.ipynb
         - file: notebooks/Chapter2/complete-table-water.ipynb
+        - file: notebooks/Chapter2/complete-table-ammonia.ipynb
         - file: notebooks/Chapter2/complete-table-R134a.ipynb
         - file: notebooks/Chapter2/piston-cylinder.ipynb
         - file: notebooks/Chapter2/piston-cylinder-isobaric-isochoric.ipynb
@@ -52,6 +52,7 @@ parts:
         - file: notebooks/Chapter4/use_different_references_in_CoolProp.ipynb
         - file: notebooks/Chapter4/Polytropic_Processes_Problem_Extended.ipynb
         - file: notebooks/Chapter4/CH4-Q9.ipynb
+        - file: notebooks/Chapter4/CH4-Q10.ipynb
   - file: notebooks/Chapter5/chapter5.md
     sections:
         - file: notebooks/Chapter5/CH5-Q1.ipynb  
@@ -62,6 +63,7 @@ parts:
         - file: notebooks/Chapter5/CH5-Q6.ipynb
         - file: notebooks/Chapter5/CH5-Q7.ipynb
         - file: notebooks/Chapter5/CH5-Q9.ipynb
+        - file: notebooks/Chapter5/CH5-Q13.ipynb
   - file: notebooks/Chapter6/chapter6.md
     sections:
         - file: notebooks/Chapter6/CH5-Q8.ipynb
@@ -79,6 +81,7 @@ parts:
         - file: notebooks/Chapter6/CH6-Q12.ipynb
         - file: notebooks/Chapter6/CH6-Q13.ipynb
         - file: notebooks/Chapter6/CH6-Q14.ipynb
+        - file: notebooks/Chapter6/CH6-Q15.ipynb
 - caption: Interactive Diagrams
   chapters:
       - file: notebooks/interactive_diagrams/diagrams.md

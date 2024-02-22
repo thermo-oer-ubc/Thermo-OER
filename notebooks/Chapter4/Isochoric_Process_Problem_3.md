@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Isochoric Process for a Gas
+# 4.2 Isochoric Process for a Gas
 ## Problem Statement:
 Consider a container with a fixed volume of 0.3 m³ that initially contains helium gas at a temperature of 15°C 
 and a pressure of 100 kPa. The gas undergoes an isochoric (constant volume) heating process until its pressure triples. 

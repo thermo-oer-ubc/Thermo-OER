@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Helium in a Spring-Loaded Cylinder
+# 4.5 Helium in a Spring-Loaded Cylinder
 
 ## Problem Statement:
 A spring-loaded piston-cylinder device contains 0.3 kg of helium. 

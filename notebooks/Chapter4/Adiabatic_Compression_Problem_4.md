@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Adiabatic Compression of an Ideal Gas
+# 4.3 Adiabatic Compression of an Ideal Gas
 
 ## Problem Statement:
 A piston-cylinder device initially contains 2 kg of air at 25°C and 1 atm. 

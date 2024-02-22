@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Piston-cylinder: isothermal expansion
+# 4.1: Piston-cylinder: isothermal expansion
 
 ## Problem Statement:
 A cylinder fitted with a frictionless piston contains 1 kg of oxygen gas at an initial temperature of 20°C 

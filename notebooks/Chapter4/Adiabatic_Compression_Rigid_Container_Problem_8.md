@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Adiabatic Compression in a Rigid Container
+# 4.7 Adiabatic Compression in a Rigid Container
 
 ## Problem Statement:
 A rigid container with 2 kg of oxygen is initially at 1 atm and 25°C. 

@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# 5. Quality of a Vapor Mixture
+# 1.5 Quality of a Vapor Mixture
 
 ## Problem Statement:
 In a vapor mixture at 150°C, the mass of the vapor phase is 3 kg, and the total mass of the mixture is 5 kg. 

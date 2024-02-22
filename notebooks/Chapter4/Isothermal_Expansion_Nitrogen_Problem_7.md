@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Isothermal Expansion of Nitrogen
+# 4.6 Isothermal Expansion of Nitrogen
 
 ## Problem Statement:
 A cylinder with a movable piston contains 1 kg of nitrogen at 100 kPa and 300 K. 
