@@ -4,7 +4,7 @@
 
 - Here is a cheatsheet to help you with simple commands in the terminal: [Link](https://www.guru99.com/linux-commands-cheat-sheet.html)
 
-- Next, we need to install `git` in Windows using ther Terminal App.
+- Next, we need to install `git` in Windows from here: https://gitforwindows.org/
 
 ## 1. Installation and adding code to content website:
 
