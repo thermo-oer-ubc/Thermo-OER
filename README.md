@@ -33,7 +33,7 @@ Installation steps to edit some of the contents for the website:
 
 - Once you are making changes, run the bash file in the root directory: `bash run.sh`; this basically "builds" your Jupyter book and creates the HTML files for the website.
 
-- Once you need to add your changes using `git`, use: `git add *`
+- Need to add your changes using `git`, use: `git add *`
 
 - Getting personal access tokens in GitHub: Click your profile photo, then click Settings. Then, on the left sidebar, you should click on Developer settings and then Personal access tokens. Click "Generate new token" and provide a short description in the "Note" field.
   
