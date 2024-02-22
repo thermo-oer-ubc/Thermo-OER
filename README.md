@@ -27,7 +27,7 @@ Installation steps to edit some of the contents for the website:
 
 - Once you need to add your changes using `git`, use: `git add *`
 
-- Getting personal access tokens in GitHub: Click your profile photo, then click Settings. Then, on the left sidebar, you should click on Developer settings and then Personal access tokens. Click "generate new token and provide a short description in the "Note" field.
+- Getting personal access tokens in GitHub: Click your profile photo, then click Settings. Then, on the left sidebar, you should click on Developer settings and then Personal access tokens. Click "Generate new token" and provide a short description in the "Note" field.
   
 - Now, get ready to commit your changes:`git commit -m "type your commit message here"` (you should use personal token that you get from your GitHub profile; its a long list of alpha numeric characters)
 
