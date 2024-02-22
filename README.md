@@ -27,9 +27,12 @@ Installation steps to edit some of the contents for the website:
 
 - Once you need to add your changes using `git`, use: `git add *`
 
-- Now, get ready to commit your changes:`git commit -m "type your commit message here"` (you should use ssh-keygen that you get from your GitHub profile)
+- Getting personal access tokens in GitHub: Click your profile photo, then click Settings. Then, on the left sidebar, you should click on Developer settings and then Personal access tokens. Click "generate new token and provide a short description in the "Note field.
+  
+- Now, get ready to commit your changes:`git commit -m "type your commit message here"` (you should use personal token that you get from your GitHub profile)
 
-- Finally, to push the changes: `git push origin`; the prompt will ask for an username, supply `thermo-oer-ubc` and then copy-paste the ssh-keygen
+
+- Finally, to push the changes: `git push origin`; the prompt will ask for an username, supply `thermo-oer-ubc` and then copy-paste the Github personal token
 
 - Additionally, there is a GitHub pages packages that depolys the workflow for creating the website using HTML you just created using Jupyter book. Use this command:
   `ghp-import -n -p -f _build/html/`; this should now create a "branch" called gh-pages apart from the main branch. This will take a few miniutes for the workflow to render the website.
