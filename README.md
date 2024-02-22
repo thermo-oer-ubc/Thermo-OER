@@ -1,4 +1,12 @@
-## Installation and adding code to content website:
+## 0. Install a terminal app on Windows:
+
+- If you are a Windows 11 user, please install Windows terminal (wt) from the Microsoft store. This will help with interfacing bash (a linux shell) with Windows.
+
+- Here is a cheatsheet to help you with simple commands in the terminal: [Link](https://www.guru99.com/linux-commands-cheat-sheet.html)
+
+- Next, we need to install `git` in Windows using ther Terminal App.
+
+## 1. Installation and adding code to content website:
 
 Installation steps to edit some of the contents for the website:
 
@@ -19,7 +27,7 @@ Installation steps to edit some of the contents for the website:
  
   -  You are now ready to make changes.
 
-## Making changes
+## 2. Pushing changes to this GitHub repository
 
 - Like making regular edits on your computer, you edit your source files (Jupyter notebooks) in this repo.
 
@@ -39,7 +47,7 @@ Installation steps to edit some of the contents for the website:
 
 - Website can be found here: `https://thermo-oer-ubc.github.io/Thermo-OER/intro.html`
 
-  ## Things to think about:
+  ## 3. Things to think about:
   
  
     
