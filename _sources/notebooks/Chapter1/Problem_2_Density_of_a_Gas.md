@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# 2. Density of a Gas
+# 1.2 Density of a Gas
 
 ## Problem Statement:
 A container with a volume of 2 m³ holds 5 kg of nitrogen gas. 

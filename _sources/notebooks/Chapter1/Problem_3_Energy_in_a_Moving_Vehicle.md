@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# 3. Energy in a Moving Vehicle
+# 1.3 Energy in a Moving Vehicle
 
 ## Problem Statement:
 A car with a mass of 1200 kg is traveling at a speed of 60 km/h. 

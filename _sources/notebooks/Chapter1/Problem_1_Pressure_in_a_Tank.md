@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# 1. Pressure in a Tank
+# 1.1 Pressure in a Tank
 
 ## Problem Statement:
 A cylindrical tank contains air at a gauge pressure of 3 atm and an ambient atmospheric pressure of 1 atm. 

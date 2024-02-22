@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Heat Transfer in a Rigid Container
+# 4.4 Heat Transfer in a Rigid Container
 
 ## Problem Statement:
 A rigid container is initially filled with 0.5 kg of carbon dioxide at 20°C and 100 kPa. 
