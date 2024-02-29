@@ -47,7 +47,15 @@ Installation steps to edit some of the contents for the website:
 
 - Website can be found here: `https://thermo-oer-ubc.github.io/Thermo-OER/intro.html`
 
-  ## 3. Things to think about:
+  ## Issues facing at the moment:
+  
+- For Windows users, there doesn't seem to a reliable BASH terminal to use for curating your conda environments. For now, options are:
+
+  - MINGW terminal (comes as a bundle with Git Bash)
+  - Windows Powershell (this is native in Windows; doesn't necessarily follow bash syntax)
+  - Terminal inside Anaconda Navigator (this is too bloaty!)
+
+- Really need to come up with a good alternative.
   
  
     
