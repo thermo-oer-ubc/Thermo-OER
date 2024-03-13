@@ -1,0 +1,17 @@
+name: OERminimal
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - ipykernel
+  - numpy
+  - matplotlib
+  - black
+  - markdown-it-py
+  - plotly
+  - ipywidgets
+  - dash
+  - itsdangerous
+  - werkzeug
+  - sphinx
