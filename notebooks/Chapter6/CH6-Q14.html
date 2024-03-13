@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6.15 Detailed Entropy Generation for a Steam Cycle &#8212; OER Engineering Thermodynamics</title>
   
@@ -19,50 +18,46 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=237b5ed9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter6/CH6-Q14';</script>
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +139,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -160,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -443,6 +452,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -452,6 +462,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -506,12 +517,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="detailed-entropy-generation-for-a-steam-cycle">
-<h1>6.15 Detailed Entropy Generation for a Steam Cycle<a class="headerlink" href="#detailed-entropy-generation-for-a-steam-cycle" title="Permalink to this heading">#</a></h1>
+<h1>6.15 Detailed Entropy Generation for a Steam Cycle<a class="headerlink" href="#detailed-entropy-generation-for-a-steam-cycle" title="Link to this heading">#</a></h1>
 <section id="problem-statement">
-<h2>Problem Statement:<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
+<h2>Problem Statement:<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
 <p>Consider a steam turbine cycle as shown in the figure below. <span class="math notranslate nohighlight">\(\dot m=1\:kg/s\)</span> of water enters the pump as saturated liquid at <span class="math notranslate nohighlight">\(P_1=101\:kPa\)</span> and is pressurized to <span class="math notranslate nohighlight">\(P_2=1\:MPa\)</span> before entering the boiler. Water is then heated in the bioler in constant pressure till its temperature reached <span class="math notranslate nohighlight">\(T_3=600\:^{\circ}C\)</span>. The steam is then used in a turbine to produce work until it reaches to temperature of <span class="math notranslate nohighlight">\(T_4=260\:^{\circ}C\)</span>. The steam is then cooled in a constant-pressure condenser to reach its saturated liquid state before entering the pump. Assuming the boiler to be a heat source at <span class="math notranslate nohighlight">\(T_H=650\:^{\circ}C\)</span> and the condenser to be a heat sink at <span class="math notranslate nohighlight">\(T_L=20\:^{\circ}C\)</span>, calculate:</p>
 <p>a) the pump work assuming the dinsity of water remain constant through pumping</p>
 <p>b) amount of heat supplied in the boiler</p>
@@ -526,7 +537,7 @@ document.write(`
 <p>k) total entropy generation considering the cycle as a heat engine</p>
 <p><img alt="CH6-Q13.jpg" src="../../_images/CH6-Q13.jpg" /></p>
 <section id="solution-approach-for-a">
-<h3>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Link to this heading">#</a></h3>
 <p>state (1) is a satuated liquid at <span class="math notranslate nohighlight">\(P_1=101\:kPa\)</span> and state (2) is pressurized water with the same density as in state (1)</p>
 <p>from the first law for the pump</p>
 <p><span class="math notranslate nohighlight">\(\dot W_P=\dot m(h_2-h_1)\)</span></p>
@@ -558,7 +569,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-b">
-<h3>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Link to this heading">#</a></h3>
 <p>The boiler is assumed in a constant pressure, so</p>
 <p><span class="math notranslate nohighlight">\(P_3 = P_2\)</span></p>
 <p>and from the first law for the boiler</p>
@@ -584,7 +595,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-c">
-<h3>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Link to this heading">#</a></h3>
 <p>The condenser is assumed to operate in a constant pressure</p>
 <p><span class="math notranslate nohighlight">\(P_4=P_1\)</span></p>
 <p>and from the first law</p>
@@ -610,7 +621,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-d">
-<h3>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Link to this heading">#</a></h3>
 <p>first law for the condenser</p>
 <p><span class="math notranslate nohighlight">\(\dot Q_L=\dot m(h_4-h_1)\)</span></p>
 <div class="cell docutils container">
@@ -629,7 +640,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-e">
-<h3>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Link to this heading">#</a></h3>
 <p>The firts law for the whole system</p>
 <p><span class="math notranslate nohighlight">\(E_in=E_out\)</span></p>
 <p><span class="math notranslate nohighlight">\(\dot Q_H+\dot W_{pump}=\dot Q_L+\dot W\)</span></p>
@@ -651,7 +662,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-f">
-<h3>Solution Approach for f)<a class="headerlink" href="#solution-approach-for-f" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for f)<a class="headerlink" href="#solution-approach-for-f" title="Link to this heading">#</a></h3>
 <p>for an open steady-state system</p>
 <p><span class="math notranslate nohighlight">\(\Sigma \dot m_es_e-\Sigma \dot m_is_i=\Sigma \dot Q/T+\dot S_{gen}\)</span></p>
 <p>for the pump</p>
@@ -677,7 +688,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-g">
-<h3>Solution Approach for g)<a class="headerlink" href="#solution-approach-for-g" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for g)<a class="headerlink" href="#solution-approach-for-g" title="Link to this heading">#</a></h3>
 <p>for the boiler</p>
 <p><span class="math notranslate nohighlight">\(\dot Q=\dot Q_H\)</span></p>
 <p>therefore</p>
@@ -702,7 +713,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-h">
-<h3>Solution Approach for h)<a class="headerlink" href="#solution-approach-for-h" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for h)<a class="headerlink" href="#solution-approach-for-h" title="Link to this heading">#</a></h3>
 <p>for the turbine</p>
 <p><span class="math notranslate nohighlight">\(\dot Q=0\)</span></p>
 <p>therefore</p>
@@ -725,7 +736,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-i">
-<h3>Solution Approach for i)<a class="headerlink" href="#solution-approach-for-i" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for i)<a class="headerlink" href="#solution-approach-for-i" title="Link to this heading">#</a></h3>
 <p>for the condenser</p>
 <p><span class="math notranslate nohighlight">\(\dot Q=\dot Q_L\)</span></p>
 <p>therefore</p>
@@ -748,7 +759,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-j">
-<h3>Solution Approach for j)<a class="headerlink" href="#solution-approach-for-j" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for j)<a class="headerlink" href="#solution-approach-for-j" title="Link to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(S_{gen}=S_{gen,pump}+S_{gen,boiler}+S_{gen,turbine}+S_{gen,condenser}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -766,7 +777,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-k">
-<h3>Solution Approach for k)<a class="headerlink" href="#solution-approach-for-k" title="Permalink to this heading">#</a></h3>
+<h3>Solution Approach for k)<a class="headerlink" href="#solution-approach-for-k" title="Link to this heading">#</a></h3>
 <p>from the second law for a closed system</p>
 <p><span class="math notranslate nohighlight">\(S_{gen}=-\Sigma Q/T=-(Q_H/T_H-Q_L/T_L)\)</span></p>
 <div class="cell docutils container">
@@ -815,7 +826,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="CH6-Q13.html"
@@ -843,6 +854,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -885,6 +897,7 @@ By Faculty of Applied Science, UBC licensed under <a href="https://creativecommo
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -911,8 +924,8 @@ By Faculty of Applied Science, UBC licensed under <a href="https://creativecommo
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

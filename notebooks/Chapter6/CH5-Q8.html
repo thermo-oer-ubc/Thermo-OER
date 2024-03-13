@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6.1 Multi-evaporator refrigeration system &#8212; OER Engineering Thermodynamics</title>
   
@@ -19,50 +18,46 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=237b5ed9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter6/CH5-Q8';</script>
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +139,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -160,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -443,6 +452,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -452,6 +462,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -500,10 +511,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="multi-evaporator-refrigeration-system">
-<h1>6.1 Multi-evaporator refrigeration system<a class="headerlink" href="#multi-evaporator-refrigeration-system" title="Permalink to this heading">#</a></h1>
+<h1>6.1 Multi-evaporator refrigeration system<a class="headerlink" href="#multi-evaporator-refrigeration-system" title="Link to this heading">#</a></h1>
 <p>Consider a multi-evaporator refrigeration system operating with two evaporators to support cooling powers for two seperate compartments set at different temperatures. The low-temperature evaporator1 operates at a constant <span class="math notranslate nohighlight">\(-20^{\circ} C\)</span> and the high-temperature evaporator2 operates at <span class="math notranslate nohighlight">\(0^{\circ} C\)</span>. To optimize the size of the condensor and the evaporators, the refrigerant R134-a is cooled down to saturated liquid at <span class="math notranslate nohighlight">\(40^{\circ} C\)</span> in the condensor and is heated up to saturated vapor in the evaporators. The evaporator outputs are then mixed after regulating the pressure for the high-temperature evaporator using a valve and then pressurized in the compressor while increasing to <span class="math notranslate nohighlight">\(120^{\circ} C\)</span> in temperature. Given the cooling loads are <span class="math notranslate nohighlight">\(150\:kW\)</span> for both cooling compartments seperately, calculate,</p>
 <p>a) the specific enthalpy of the refrigerant exiting the condenser</p>
 <p>b) the specific enthalpy of the refrigerant exiting each of the evaporators</p>
@@ -515,7 +526,7 @@ document.write(`
 <p>h) the coefficient of performance (COP)</p>
 <p><img alt="CH5-Q8.jpg" src="../../_images/CH5-Q8.png" /></p>
 <section id="solution-approach-for-a">
-<h2>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Link to this heading">#</a></h2>
 <p>the refrigerant exiting the condenser would be a sat liquid at <span class="math notranslate nohighlight">\(40^{\circ} C\)</span>, therefore</p>
 <p><span class="math notranslate nohighlight">\(h_3=h_{f&#64;40^{\circ} C}\)</span></p>
 <div class="cell docutils container">
@@ -539,7 +550,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-b">
-<h2>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Link to this heading">#</a></h2>
 <p>the low-temperature evaporator operates at <span class="math notranslate nohighlight">\(-20^{\circ} C\)</span> and the high-temperature one operates at <span class="math notranslate nohighlight">\(0^{\circ} C\)</span> and the refrigerant exiting those are at their saturated liquid state to optimize evaporators’ performance, therefore</p>
 <p><span class="math notranslate nohighlight">\(h_6=h_{g&#64;-20^{\circ} C}\)</span></p>
 <p><span class="math notranslate nohighlight">\(h_9=h_{g&#64;0^{\circ} C}\)</span></p>
@@ -565,7 +576,7 @@ The specific enthalpy of the refrigerant exiting the evaporator 2 is: 398.6 kJ/k
 </div>
 </section>
 <section id="solution-approach-for-c">
-<h2>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Link to this heading">#</a></h2>
 <p>to calculate the flow-rate based on cooling load, the cooling capacities for the evaporators are to be calculated first. For Evaporator 1,</p>
 <p><span class="math notranslate nohighlight">\(h_5=h_4\)</span> assuming a constant enthalpy expansion valve</p>
 <p>and</p>
@@ -614,7 +625,7 @@ The refrigerant flow-rate in evaporator 2 is: 0.7 kg/s
 </div>
 </section>
 <section id="solution-approach-for-d">
-<h2>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Link to this heading">#</a></h2>
 <p>applying the first law and conservation of mass to the mixing point where two outlets from evaporators come together,</p>
 <p><span class="math notranslate nohighlight">\(\dot m_{10}+\dot m_6=\dot m_1\)</span></p>
 <p><span class="math notranslate nohighlight">\(\dot m_{10}h_{10}+\dot m_6h_6=\dot m_1h_1\)</span></p>
@@ -647,7 +658,7 @@ The refrigerant flow-rate in evaporator 2 is: 0.7 kg/s
 </div>
 </section>
 <section id="solution-approach-for-e">
-<h2>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Link to this heading">#</a></h2>
 <p>For compressor inlet, the pressure would be same pressure as is in evaporator 1 which is the saturation pressure at the low temperature(<span class="math notranslate nohighlight">\(-20^{\circ} C\)</span>)</p>
 <p><span class="math notranslate nohighlight">\(P_1 = P_6 = P_{sat&#64;-20^{\circ} C}\)</span></p>
 <p>For compressor outlet, the pressure would be same as working pressure for the condenser which is the saturation pressure at <span class="math notranslate nohighlight">\(40^{\circ} C\)</span></p>
@@ -674,7 +685,7 @@ The refrigerant flow-rate in evaporator 2 is: 0.7 kg/s
 </div>
 </section>
 <section id="solution-approach-for-f">
-<h2>Solution Approach for f)<a class="headerlink" href="#solution-approach-for-f" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for f)<a class="headerlink" href="#solution-approach-for-f" title="Link to this heading">#</a></h2>
 <p>The specific enthalpy of he refrigerant at the compressor outlet is evaluated based on temperature and pressure</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -693,7 +704,7 @@ The refrigerant flow-rate in evaporator 2 is: 0.7 kg/s
 </div>
 </section>
 <section id="solution-approach-for-g">
-<h2>Solution Approach for g)<a class="headerlink" href="#solution-approach-for-g" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for g)<a class="headerlink" href="#solution-approach-for-g" title="Link to this heading">#</a></h2>
 <p>Based on the first law,</p>
 <p><span class="math notranslate nohighlight">\(\dot W= \dot m\:(h_2-h_1)\)</span>e</p>
 <div class="cell docutils container">
@@ -711,7 +722,7 @@ The refrigerant flow-rate in evaporator 2 is: 0.7 kg/s
 </div>
 </section>
 <section id="solution-approach-for-h">
-<h2>Solution Approach for h)<a class="headerlink" href="#solution-approach-for-h" title="Permalink to this heading">#</a></h2>
+<h2>Solution Approach for h)<a class="headerlink" href="#solution-approach-for-h" title="Link to this heading">#</a></h2>
 <p><span class="math notranslate nohighlight">\(COP = Q_c(cooling\:load) / W(compressor\:work\:input)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -757,7 +768,7 @@ The refrigerant flow-rate in evaporator 2 is: 0.7 kg/s
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter6.html"
@@ -785,6 +796,7 @@ The refrigerant flow-rate in evaporator 2 is: 0.7 kg/s
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -821,6 +833,7 @@ By Faculty of Applied Science, UBC licensed under <a href="https://creativecommo
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -847,8 +860,8 @@ By Faculty of Applied Science, UBC licensed under <a href="https://creativecommo
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

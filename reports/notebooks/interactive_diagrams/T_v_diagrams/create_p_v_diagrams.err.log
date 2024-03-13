@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/home/hari/miniconda3/envs/OERminimal/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/hari/miniconda3/envs/OERminimal/lib/python3.9/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/hari/miniconda3/envs/OERminimal/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/hari/miniconda3/envs/OERminimal/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/home/hari/miniconda3/envs/OERminimal/lib/python3.9/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/hari/miniconda3/envs/OERminimal/lib/python3.9/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/hari/miniconda3/envs/OERminimal/lib/python3.9/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import CoolProp.CoolProp as CP
+import pandas as pd
+import numpy as np
+
+import plotly.graph_objs as go
+from IPython.display import IFrame
+fluids = ['Water', 'Ammonia', 'R134a']
+
+for fluid in fluids:
+    T_min = CP.PropsSI('Tmin', fluid) + 10  # Adding a small offset to Tmin
+    T_max = CP.PropsSI('Tcrit', fluid)
+    T_vals = np.linspace(T_min, T_max, 400)  # Number of points
+
+    p_v_liquid = {'Pressure (Pa)': [], 'Specific Volume Liquid (m^3/kg)': []}
+    p_v_vapor = {'Pressure (Pa)': [], 'Specific Volume Vapor (m^3/kg)': []}
+
+    for T in T_vals:
+        p = CP.PropsSI('P', 'T', T, 'Q', 0, fluid)
+        v_liquid = 1 / CP.PropsSI('D', 'T', T, 'Q', 0, fluid)  # Saturated liquid
+        v_vapor = 1 / CP.PropsSI('D', 'T', T, 'Q', 1, fluid)  # Saturated vapor
+        p_v_liquid['Pressure (Pa)'].append(p)
+        p_v_liquid['Specific Volume Liquid (m^3/kg)'].append(v_liquid)
+        p_v_vapor['Pressure (Pa)'].append(p)
+        p_v_vapor['Specific Volume Vapor (m^3/kg)'].append(v_vapor)
+
+    # Save to CSV
+    pd.DataFrame(p_v_liquid).to_csv(f'{fluid}_p_v_liquid.csv', index=False)
+    pd.DataFrame(p_v_vapor).to_csv(f'{fluid}_p_v_vapor.csv', index=False)
+
+
+import plotly.graph_objs as go
+
+for fluid in fluids:
+    df_liquid = pd.read_csv(f'{fluid}_p_v_liquid.csv')
+    df_vapor = pd.read_csv(f'{fluid}_p_v_vapor.csv')
+
+    # Creating Plotly plot
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=df_liquid['Specific Volume Liquid (m^3/kg)'], y=df_liquid['Pressure (Pa)'],
+                             mode='lines', name='Saturated Liquid'))
+    fig.add_trace(go.Scatter(x=df_vapor['Specific Volume Vapor (m^3/kg)'], y=df_vapor['Pressure (Pa)'],
+                             mode='lines', name='Saturated Vapor'))
+
+    # Set log scale for x-axis
+    fig.update_layout(xaxis_type="log", title=f'{fluid} p-v Diagram', 
+                      xaxis_title='Specific Volume (m^3/kg)', yaxis_title='Pressure (Pa)')
+
+    # Save as HTML
+    fig.write_html(f'{fluid}_p_v_plot.html')
+
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mCoolProp[39;00m[38;5;21;01m.[39;00m[38;5;21;01mCoolProp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mCP[39;00m
+[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgraph_objs[39;00m [38;5;28;01mas[39;00m [38;5;21;01mgo[39;00m
+
+[0;31mModuleNotFoundError[0m: No module named 'pandas'
+
