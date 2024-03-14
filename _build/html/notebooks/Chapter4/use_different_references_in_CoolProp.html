@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4.9 Reference States in Thermodynamics &#8212; OER Engineering Thermodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=237b5ed9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter4/use_different_references_in_CoolProp';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4.10: Comparison of work done in different processes" href="Polytropic_Processes_Problem_Extended.html" />
+    <link rel="prev" title="4.8 Linear interpolation for Internal energy of Superheated water" href="linear-interpolation-nternal-energy.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/text16.png" class="logo__image only-light" alt="OER Engineering Thermodynamics - Home"/>
+    <script>document.write(`<img src="../../_static/text16.png" class="logo__image only-dark" alt="OER Engineering Thermodynamics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Open Education Resources (OER): Introduction to Engineering Thermodynamics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ack/ack.html">Acknowledgements</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started: Introduction to Jupyter and Python!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/basic_math.html">Basic operations inside Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Table_G1_Properties_of_ideal_gases.html">Defining variables: Properties of Ideal Gases as use case</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_1_Pressure_in_a_Tank.html">1.1 Pressure in a Tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_2_Density_of_a_Gas.html">1.2 Density of a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_3_Energy_in_a_Moving_Vehicle.html">1.3 Energy in a Moving Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_4_Enthalpy_of_a_Steam.html">1.4 Enthalpy of a Steam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_5_Quality_of_a_Vapor_Mixture.html">1.5 Quality of a Vapor Mixture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_6_Compressed_Liquid_Approximation.html">1.6 Compressed Liquid Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_7_Conversion_of_Temperature.html">1.7 Conversion of Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_8_Specific_Entropy_Calculation.html">1.8 Specific Entropy Calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/thermo-properties.html">2. Thermodynamic Properties of a Pure Substance</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-water.html">2.1 Thermodynamic properties of Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-ammonia.html">2.2 Thermodynamic properties of Ammonia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-R134a.html">2.3 Thermodynamic properties of R-134a</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/piston-cylinder.html">2.4 Piston-cylinder: Isobaric process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/piston-cylinder-isobaric-isochoric.html">2.5 Piston-cylinder: Isobaric- Isochoric process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q6.html">2.6: Weighted Piston</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q7.html">2.7: Weighted Piston and Pressed Spring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q8.html">2.8: Internal Energy in a Rigid Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q9.html">2.9: Saturated Water in a Rigid Tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q10.html">2.10: Water in Two Tanks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/chapter3.html">3. Ideal and Real Gases</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q1_v1.html">3.1 Ideal gas law: Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q2_v1.html">3.2 Thermo-mechanical Equilibrium: Partitions in a Box</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q3_edited_edited.html">3.3 Piston-cylinder system for Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q4_v1.html">3.4 Isobaric-Isochoric process: Nitrogen as Ideal gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q5_v1.html">3.5 Lee - Kesler Compressibility factor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q6_v1.html">3.6 Ideal gas assumption for Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q7.html">3.7: Validating Ideal Gas Assumption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q8.html">3.8: Pressurized Cylinder: Carbon dioxide</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q9.html">3.9: Can Crush</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q10.html">3.10: Whistle Kettle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="first-law.html">4. The First Law of Thermodynamics for Closed Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Thermodynamics_Example_2.html">4.1: Piston-cylinder: isothermal expansion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Isochoric_Process_Problem_3.html">4.2 Isochoric Process for a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Adiabatic_Compression_Problem_4.html">4.3 Adiabatic Compression of an Ideal Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heat_Transfer_Rigid_Container_Problem_5.html">4.4 Heat Transfer in a Rigid Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Helium_Spring_Loaded_Cylinder_Problem_6.html">4.5 Helium in a Spring-Loaded Cylinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Isothermal_Expansion_Nitrogen_Problem_7.html">4.6 Isothermal Expansion of Nitrogen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Adiabatic_Compression_Rigid_Container_Problem_8.html">4.7 Adiabatic Compression in a Rigid Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear-interpolation-nternal-energy.html">4.8 Linear interpolation for Internal energy of Superheated water</a></li>
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.9 Reference States in Thermodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Polytropic_Processes_Problem_Extended.html">4.10: Comparison of work done in different processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH4-Q9.html">4.11: Polytropic Tire Deflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH4-Q10.html">4.12: P-v diagram for Polytropic air</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/chapter5.html">5. The First Law of Thermodynamics for a Control Volume</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q1.html">5.1: Energy balance for Stream in Control Volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q2.html">5.2 Piston-cylinder: Carbon dioxide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q3.html">5.3: Air Compressor and Turbine</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q4_v1.2.html">5.4 P-h diagram for R-134a refrigerant</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q5.html">5.5 Refrigeration cycle: R134a</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q6.html">5.6 Refrigeration cycle: R134a</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q7.html">5.7 Refrigeration cycle: Water flow-rate</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q9.html">5.8 Nozzle: Hydrogen gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q13.html">5.9: Reheat Cycle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter6/chapter6.html">6. Entropy and the Second Law of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH5-Q8.html">6.1 Multi-evaporator refrigeration system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q0.html">6.2 Hot water in an open container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q2.html">6.3 Rankine Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q3.html">6.4 Refrigeration/ heat pump system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q4.html">6.5 Heat engine and refrigeration cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q5.html">6.6 T-s diagram for Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q6.html">6.7 Entropy change in Rigid tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q7.html">6.9 Entropy generation: steam in Piston-cyclinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q8.html">6.9 Entropy generation: Polytropic compression of Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q9.html">6.10: Air in rigid tank: two compartments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q10.html">6.11 Second Law for an Open Turbine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q11.html">6.12: Second Law for a Refrigration Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q12.html">6.13 Entropy in a heated rigid tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q13.html">6.14 Entropy Generation for a Steam Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q14.html">6.15 Detailed Entropy Generation for a Steam Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter6/CH6-Q15.html">6.16 Multilevel Carnot Heat Engine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Diagrams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive_diagrams/diagrams.html">Property Diagrams</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/p_h.html">P-h diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/p_v.html">P-v diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/T_s.html">T-s diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/T_v.html">T-v diagrams</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter4/use_different_references_in_CoolProp.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/Chapter4/use_different_references_in_CoolProp.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4.9 Reference States in Thermodynamics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="reference-states-in-thermodynamics">
+<h1>4.9 Reference States in Thermodynamics<a class="headerlink" href="#reference-states-in-thermodynamics" title="Link to this heading">#</a></h1>
+<p>In thermodynamics, a reference state serves as a baseline or zero point for measuring thermodynamic properties such as enthalpy (H) and entropy (S). Choosing different reference states doesn’t affect the differences in properties calculated using different states of a substance.</p>
+<p>For substances such as refrigerants (e.g., R-134a), commonly used reference states include the Normal Boiling Point (NBP) and the International Institute of Refrigeration (IIR) standard:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>NBP: It sets the enthalpy and entropy at the boiling point of the substance under 1 atmosphere to zero. This is a common reference for refrigerants.
+
+IIR: This reference state, set by the International Institute of Refrigeration, defines the enthalpy and entropy at 0°C and a pressure where the liquid is saturated to be zero for refrigerants.
+
+For refrigerants, the ASHRAE reference state typically sets a specific point where the enthalpy and entropy are defined to be zero. This point is the saturated liquid state at a specified temperature, often associated with a standard condition such as under a temperature of -40°C or -40°F. (This is what is being followed in the textbook!)
+</pre></div>
+</div>
+<p>Despite the reference state chosen, the differences in enthalpy (ΔH) and entropy (ΔS) between two defined states of R-134a remain the same. These differences are intrinsic and are not influenced by the reference points, as you’ll observe in the CoolProp calculations that follow.</p>
+<section id="problem-statement">
+<h2>Problem statement:<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
+<p>Use threee different references and calculate absolute and relative differences of S, H for R134a refigerant fluid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## add internal energy as another property</span>
+<span class="c1">## make it clear what the textbook uses, in this case it is ASHRAE. A note at the end would be great.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution">
+<h2>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
+
+<span class="c1"># Define two states for R-134a</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="mi">280</span>  <span class="c1"># Temperature in K for state 1</span>
+<span class="n">P1</span> <span class="o">=</span> <span class="mi">101325</span>  <span class="c1"># Pressure in Pa for state 1 (1 atm)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="mi">300</span>  <span class="c1"># Temperature in K for state 2</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="mi">200000</span>  <span class="c1"># Pressure in Pa for state 2</span>
+
+<span class="c1"># Set the IIR reference state</span>
+<span class="n">CP</span><span class="o">.</span><span class="n">set_reference_state</span><span class="p">(</span><span class="s1">&#39;R134a&#39;</span><span class="p">,</span> <span class="s1">&#39;IIR&#39;</span><span class="p">)</span>
+
+<span class="c1"># Calculate enthalpy and entropy for both states with the IIR reference</span>
+<span class="n">h1_iir</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">s1_iir</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">h2_iir</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">s2_iir</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+
+<span class="c1"># Calculate differences with IIR reference</span>
+<span class="n">dh_iir</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2_iir</span> <span class="o">-</span> <span class="n">h1_iir</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+<span class="n">ds_iir</span> <span class="o">=</span> <span class="p">(</span><span class="n">s2_iir</span> <span class="o">-</span> <span class="n">s1_iir</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+
+<span class="c1"># Set the NBP reference state</span>
+<span class="n">CP</span><span class="o">.</span><span class="n">set_reference_state</span><span class="p">(</span><span class="s1">&#39;R134a&#39;</span><span class="p">,</span> <span class="s1">&#39;NBP&#39;</span><span class="p">)</span>
+
+<span class="c1"># Calculate enthalpy and entropy for both states with the NBP reference</span>
+<span class="n">h1_nbp</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">s1_nbp</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">h2_nbp</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">s2_nbp</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+
+<span class="c1"># Calculate differences with NBP reference</span>
+<span class="n">dh_nbp</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2_nbp</span> <span class="o">-</span> <span class="n">h1_nbp</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+<span class="n">ds_nbp</span> <span class="o">=</span> <span class="p">(</span><span class="n">s2_nbp</span> <span class="o">-</span> <span class="n">s1_nbp</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+
+<span class="c1"># Set the ASHRAE reference state</span>
+<span class="n">CP</span><span class="o">.</span><span class="n">set_reference_state</span><span class="p">(</span><span class="s1">&#39;R134a&#39;</span><span class="p">,</span> <span class="s1">&#39;ASHRAE&#39;</span><span class="p">)</span>
+
+<span class="c1"># Calculate enthalpy and entropy for both states with the ASHRAE reference</span>
+<span class="n">h1_ashrae</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">s1_ashrae</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">h2_ashrae</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+<span class="n">s2_ashrae</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s1">&#39;R134a&#39;</span><span class="p">)</span> 
+
+<span class="c1"># Calculate differences with ASHRAE reference</span>
+<span class="n">dh_ashrae</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2_ashrae</span> <span class="o">-</span> <span class="n">h1_ashrae</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+<span class="n">ds_ashrae</span> <span class="o">=</span> <span class="p">(</span><span class="n">s2_ashrae</span> <span class="o">-</span> <span class="n">s1_ashrae</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Properties at T = 280 K and P = 1 bar&quot;</span><span class="p">)</span>
+<span class="c1"># Print statements for each state</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IIR Reference State:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 1 Enthalpy (kJ/kg): </span><span class="si">{</span><span class="n">h1_iir</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 1 Entropy (kJ/kgK): </span><span class="si">{</span><span class="n">s1_iir</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 2 Enthalpy (kJ/kg): </span><span class="si">{</span><span class="n">h2_iir</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 2 Entropy (kJ/kgK): </span><span class="si">{</span><span class="n">s2_iir</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Enthalpy Difference (kJ/kg): </span><span class="si">{</span><span class="n">dh_iir</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entropy Difference (kJ/kgK): </span><span class="si">{</span><span class="n">ds_iir</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NBP Reference State:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 1 Enthalpy (kJ/kg): </span><span class="si">{</span><span class="n">h1_nbp</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 1 Entropy (kJ/kgK): </span><span class="si">{</span><span class="n">s1_nbp</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 2 Enthalpy (kJ/kg): </span><span class="si">{</span><span class="n">h2_nbp</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 2 Entropy (kJ/kgK): </span><span class="si">{</span><span class="n">s2_nbp</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Enthalpy Difference (kJ/kg): </span><span class="si">{</span><span class="n">dh_nbp</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entropy Difference (kJ/kgK): </span><span class="si">{</span><span class="n">ds_nbp</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ASHRAE Reference State:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 1 Enthalpy (kJ/kg): </span><span class="si">{</span><span class="n">h1_ashrae</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 1 Entropy (kJ/kgK): </span><span class="si">{</span><span class="n">s1_ashrae</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 2 Enthalpy (kJ/kg): </span><span class="si">{</span><span class="n">h2_ashrae</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State 2 Entropy (kJ/kgK): </span><span class="si">{</span><span class="n">s2_ashrae</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Enthalpy Difference (kJ/kg): </span><span class="si">{</span><span class="n">dh_ashrae</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entropy Difference (kJ/kgK): </span><span class="si">{</span><span class="n">ds_ashrae</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Properties at T = 280 K and P = 1 bar
+IIR Reference State:
+State 1 Enthalpy (kJ/kg): 409.317
+State 1 Entropy (kJ/kgK): 1.848
+State 2 Enthalpy (kJ/kg): 424.282
+State 2 Entropy (kJ/kgK): 1.846
+Enthalpy Difference (kJ/kg): 14.965
+Entropy Difference (kJ/kgK): -0.002
+
+NBP Reference State:
+State 1 Enthalpy (kJ/kg): 243.507
+State 1 Entropy (kJ/kgK): 0.979
+State 2 Enthalpy (kJ/kg): 258.472
+State 2 Entropy (kJ/kgK): 0.977
+Enthalpy Difference (kJ/kg): 14.965
+Entropy Difference (kJ/kgK): -0.002
+
+ASHRAE Reference State:
+State 1 Enthalpy (kJ/kg): 261.173
+State 1 Entropy (kJ/kgK): 1.052
+State 2 Enthalpy (kJ/kg): 276.138
+State 2 Entropy (kJ/kgK): 1.050
+Enthalpy Difference (kJ/kg): 14.965
+Entropy Difference (kJ/kgK): -0.002
+</pre></div>
+</div>
+</div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Reference</p></th>
+<th class="head"><p>State</p></th>
+<th class="head"><p>Enthalpy (kJ/kg)</p></th>
+<th class="head"><p>Entropy (kJ/(kg·K))</p></th>
+<th class="head"><p>ΔH (kJ/kg)</p></th>
+<th class="head"><p>ΔS (kJ/(kg·K))</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IIR</p></td>
+<td><p>1(280 K, 1bar)</p></td>
+<td><p>409.317</p></td>
+<td><p>1.848</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>IIR</p></td>
+<td><p>2</p></td>
+<td><p>424.282</p></td>
+<td><p>1.846</p></td>
+<td><p>14.965</p></td>
+<td><p>-0.002</p></td>
+</tr>
+<tr class="row-even"><td><p>NBP</p></td>
+<td><p>1</p></td>
+<td><p>243.507</p></td>
+<td><p>0.979</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>NBP</p></td>
+<td><p>2</p></td>
+<td><p>258.472</p></td>
+<td><p>0.977</p></td>
+<td><p>14.965</p></td>
+<td><p>-0.002</p></td>
+</tr>
+<tr class="row-even"><td><p>ASHRAE</p></td>
+<td><p>1</p></td>
+<td><p>261.173</p></td>
+<td><p>1.052</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>ASHRAE</p></td>
+<td><p>2</p></td>
+<td><p>276.138</p></td>
+<td><p>1.050</p></td>
+<td><p>14.965</p></td>
+<td><p>-0.002</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Arrays of known points</span>
+<span class="n">x_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">y_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0333</span><span class="p">,</span> <span class="mf">1.0628</span><span class="p">])</span>
+
+<span class="c1"># Point to interpolate</span>
+<span class="n">x</span><span class="o">=</span> <span class="mi">280</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="c1"># Perform interpolation</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_points</span><span class="p">,</span> <span class="n">y_points</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interpolated value at x = </span><span class="si">{}</span><span class="s2">: y = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolated value at x = 6.85: y = 1.054
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Arrays of known points</span>
+<span class="n">x_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+<span class="n">y_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">270.20</span><span class="p">,</span> <span class="mf">278.91</span><span class="p">])</span>
+
+<span class="c1"># Point to interpolate</span>
+<span class="n">x</span><span class="o">=</span> <span class="mi">300</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="c1"># Perform interpolation</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_points</span><span class="p">,</span> <span class="n">y_points</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interpolated value at x = </span><span class="si">{}</span><span class="s2">: y = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolated value at x = 26.85: y = 276.17
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "oer"
+        },
+        kernelOptions: {
+            name: "oer",
+            path: "./notebooks/Chapter4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'oer'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="linear-interpolation-nternal-energy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4.8 Linear interpolation for Internal energy of Superheated water</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Polytropic_Processes_Problem_Extended.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4.10: Comparison of work done in different processes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Faculty of Applied Science, UBC licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">[CC-BY-SA 4.0]</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

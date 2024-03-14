@@ -28,6 +28,11 @@ parts:
         - file: notebooks/Chapter2/complete-table-R134a.ipynb
         - file: notebooks/Chapter2/piston-cylinder.ipynb
         - file: notebooks/Chapter2/piston-cylinder-isobaric-isochoric.ipynb
+        - file: notebooks/Chapter2/CH2-Q6.ipynb
+        - file: notebooks/Chapter2/CH2-Q7.ipynb
+        - file: notebooks/Chapter2/CH2-Q8.ipynb
+        - file: notebooks/Chapter2/CH2-Q9.ipynb
+        - file: notebooks/Chapter2/CH2-Q10.ipynb
   - file: notebooks/Chapter3/chapter3.md
     sections:
         - file: notebooks/Chapter3/CH3-Q1_v1.ipynb  
@@ -38,6 +43,8 @@ parts:
         - file: notebooks/Chapter3/CH3-Q6_v1.ipynb
         - file: notebooks/Chapter3/CH3-Q7.ipynb
         - file: notebooks/Chapter3/CH3-Q8.ipynb
+        - file: notebooks/Chapter3/CH3-Q9.ipynb
+        - file: notebooks/Chapter3/CH3-Q10.ipynb
   - file: notebooks/Chapter4/first-law.md
     sections:
         #- file: notebooks/Chapter4/Thermodynamics_Example_1.md

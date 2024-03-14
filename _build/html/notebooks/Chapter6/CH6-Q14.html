@@ -1,0 +1,940 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6.15 Detailed Entropy Generation for a Steam Cycle &#8212; OER Engineering Thermodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=237b5ed9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter6/CH6-Q14';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6.16 Multilevel Carnot Heat Engine" href="CH6-Q15.html" />
+    <link rel="prev" title="6.14 Entropy Generation for a Steam Cycle" href="CH6-Q13.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/text16.png" class="logo__image only-light" alt="OER Engineering Thermodynamics - Home"/>
+    <script>document.write(`<img src="../../_static/text16.png" class="logo__image only-dark" alt="OER Engineering Thermodynamics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Open Education Resources (OER): Introduction to Engineering Thermodynamics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ack/ack.html">Acknowledgements</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started: Introduction to Jupyter and Python!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/basic_math.html">Basic operations inside Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Table_G1_Properties_of_ideal_gases.html">Defining variables: Properties of Ideal Gases as use case</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/chapter1.html">1. Basic Concepts and Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_1_Pressure_in_a_Tank.html">1.1 Pressure in a Tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_2_Density_of_a_Gas.html">1.2 Density of a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_3_Energy_in_a_Moving_Vehicle.html">1.3 Energy in a Moving Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_4_Enthalpy_of_a_Steam.html">1.4 Enthalpy of a Steam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_5_Quality_of_a_Vapor_Mixture.html">1.5 Quality of a Vapor Mixture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_6_Compressed_Liquid_Approximation.html">1.6 Compressed Liquid Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_7_Conversion_of_Temperature.html">1.7 Conversion of Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/Problem_8_Specific_Entropy_Calculation.html">1.8 Specific Entropy Calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/thermo-properties.html">2. Thermodynamic Properties of a Pure Substance</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-water.html">2.1 Thermodynamic properties of Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-ammonia.html">2.2 Thermodynamic properties of Ammonia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/complete-table-R134a.html">2.3 Thermodynamic properties of R-134a</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/piston-cylinder.html">2.4 Piston-cylinder: Isobaric process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/piston-cylinder-isobaric-isochoric.html">2.5 Piston-cylinder: Isobaric- Isochoric process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q6.html">2.6: Weighted Piston</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q7.html">2.7: Weighted Piston and Pressed Spring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q8.html">2.8: Internal Energy in a Rigid Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q9.html">2.9: Saturated Water in a Rigid Tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/CH2-Q10.html">2.10: Water in Two Tanks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/chapter3.html">3. Ideal and Real Gases</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q1_v1.html">3.1 Ideal gas law: Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q2_v1.html">3.2 Thermo-mechanical Equilibrium: Partitions in a Box</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q3_edited_edited.html">3.3 Piston-cylinder system for Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q4_v1.html">3.4 Isobaric-Isochoric process: Nitrogen as Ideal gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q5_v1.html">3.5 Lee - Kesler Compressibility factor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q6_v1.html">3.6 Ideal gas assumption for Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q7.html">3.7: Validating Ideal Gas Assumption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q8.html">3.8: Pressurized Cylinder: Carbon dioxide</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q9.html">3.9: Can Crush</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/CH3-Q10.html">3.10: Whistle Kettle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter4/first-law.html">4. The First Law of Thermodynamics for Closed Systems</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Thermodynamics_Example_2.html">4.1: Piston-cylinder: isothermal expansion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Isochoric_Process_Problem_3.html">4.2 Isochoric Process for a Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Adiabatic_Compression_Problem_4.html">4.3 Adiabatic Compression of an Ideal Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Heat_Transfer_Rigid_Container_Problem_5.html">4.4 Heat Transfer in a Rigid Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Helium_Spring_Loaded_Cylinder_Problem_6.html">4.5 Helium in a Spring-Loaded Cylinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Isothermal_Expansion_Nitrogen_Problem_7.html">4.6 Isothermal Expansion of Nitrogen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Adiabatic_Compression_Rigid_Container_Problem_8.html">4.7 Adiabatic Compression in a Rigid Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/linear-interpolation-nternal-energy.html">4.8 Linear interpolation for Internal energy of Superheated water</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/use_different_references_in_CoolProp.html">4.9 Reference States in Thermodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/Polytropic_Processes_Problem_Extended.html">4.10: Comparison of work done in different processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/CH4-Q9.html">4.11: Polytropic Tire Deflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/CH4-Q10.html">4.12: P-v diagram for Polytropic air</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/chapter5.html">5. The First Law of Thermodynamics for a Control Volume</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q1.html">5.1: Energy balance for Stream in Control Volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q2.html">5.2 Piston-cylinder: Carbon dioxide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q3.html">5.3: Air Compressor and Turbine</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q4_v1.2.html">5.4 P-h diagram for R-134a refrigerant</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q5.html">5.5 Refrigeration cycle: R134a</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q6.html">5.6 Refrigeration cycle: R134a</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q7.html">5.7 Refrigeration cycle: Water flow-rate</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q9.html">5.8 Nozzle: Hydrogen gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/CH5-Q13.html">5.9: Reheat Cycle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter6.html">6. Entropy and the Second Law of Thermodynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="CH5-Q8.html">6.1 Multi-evaporator refrigeration system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q0.html">6.2 Hot water in an open container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q2.html">6.3 Rankine Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q3.html">6.4 Refrigeration/ heat pump system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q4.html">6.5 Heat engine and refrigeration cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q5.html">6.6 T-s diagram for Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q6.html">6.7 Entropy change in Rigid tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q7.html">6.9 Entropy generation: steam in Piston-cyclinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q8.html">6.9 Entropy generation: Polytropic compression of Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q9.html">6.10: Air in rigid tank: two compartments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q10.html">6.11 Second Law for an Open Turbine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q11.html">6.12: Second Law for a Refrigration Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q12.html">6.13 Entropy in a heated rigid tank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q13.html">6.14 Entropy Generation for a Steam Cycle</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.15 Detailed Entropy Generation for a Steam Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH6-Q15.html">6.16 Multilevel Carnot Heat Engine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Diagrams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive_diagrams/diagrams.html">Property Diagrams</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/p_h.html">P-h diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/p_v.html">P-v diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/T_s.html">T-s diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive_diagrams/T_v_diagrams/T_v.html">T-v diagrams</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter6/CH6-Q14.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/Chapter6/CH6-Q14.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6.15 Detailed Entropy Generation for a Steam Cycle</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-f">Solution Approach for f)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-g">Solution Approach for g)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-h">Solution Approach for h)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-i">Solution Approach for i)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-j">Solution Approach for j)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-k">Solution Approach for k)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="detailed-entropy-generation-for-a-steam-cycle">
+<h1>6.15 Detailed Entropy Generation for a Steam Cycle<a class="headerlink" href="#detailed-entropy-generation-for-a-steam-cycle" title="Link to this heading">#</a></h1>
+<section id="problem-statement">
+<h2>Problem Statement:<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
+<p>Consider a steam turbine cycle as shown in the figure below. <span class="math notranslate nohighlight">\(\dot m=1\:kg/s\)</span> of water enters the pump as saturated liquid at <span class="math notranslate nohighlight">\(P_1=101\:kPa\)</span> and is pressurized to <span class="math notranslate nohighlight">\(P_2=1\:MPa\)</span> before entering the boiler. Water is then heated in the bioler in constant pressure till its temperature reached <span class="math notranslate nohighlight">\(T_3=600\:^{\circ}C\)</span>. The steam is then used in a turbine to produce work until it reaches to temperature of <span class="math notranslate nohighlight">\(T_4=260\:^{\circ}C\)</span>. The steam is then cooled in a constant-pressure condenser to reach its saturated liquid state before entering the pump. Assuming the boiler to be a heat source at <span class="math notranslate nohighlight">\(T_H=650\:^{\circ}C\)</span> and the condenser to be a heat sink at <span class="math notranslate nohighlight">\(T_L=20\:^{\circ}C\)</span>, calculate:</p>
+<p>a) the pump work assuming the dinsity of water remain constant through pumping</p>
+<p>b) amount of heat supplied in the boiler</p>
+<p>c) amount of work output in turbine</p>
+<p>d) amount of heat dissipated in the condenser based on inlet and outlet enthalpies</p>
+<p>e) amount of heat dissipated in the condenser looking to the system as a whole</p>
+<p>f) entropy generation in the pump</p>
+<p>g) entropy generation in the boiler</p>
+<p>h) entropy generation in the turbine</p>
+<p>i) entropy generation in the condenser</p>
+<p>j) total entropy generation based on entropy generation for each element</p>
+<p>k) total entropy generation considering the cycle as a heat engine</p>
+<p><img alt="CH6-Q13.jpg" src="../../_images/CH6-Q13.jpg" /></p>
+<section id="solution-approach-for-a">
+<h3>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Link to this heading">#</a></h3>
+<p>state (1) is a satuated liquid at <span class="math notranslate nohighlight">\(P_1=101\:kPa\)</span> and state (2) is pressurized water with the same density as in state (1)</p>
+<p>from the first law for the pump</p>
+<p><span class="math notranslate nohighlight">\(\dot W_P=\dot m(h_2-h_1)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
+<span class="n">fluid</span> <span class="o">=</span> <span class="s2">&quot;water&quot;</span>  <span class="c1"># define the fluid or material of interest</span>
+
+<span class="n">P_1</span> <span class="o">=</span> <span class="mf">101E+3</span>   <span class="c1">#pressure in state (1) in Pa</span>
+<span class="n">P_2</span> <span class="o">=</span> <span class="mf">1E+6</span>   <span class="c1">#pressure in state (2) in Pa</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c1">#water flow-rate in kg/s</span>
+
+<span class="n">h_1</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_1</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#enthalpy in state (1) in J/kg</span>
+<span class="n">d_1</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_1</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#density in state (1) in kg/m3</span>
+<span class="n">d_2</span> <span class="o">=</span> <span class="n">d_1</span>   <span class="c1">#density in state (2) in kg/m3</span>
+<span class="n">h_2</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_2</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">d_2</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#enthalpy in state (2) in J/kg   </span>
+
+<span class="n">W_P</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">h_2</span> <span class="o">-</span> <span class="n">h_1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The pump work for the cycle is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">W_P</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kW&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The pump work for the cycle is: 3.1 kW
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-b">
+<h3>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Link to this heading">#</a></h3>
+<p>The boiler is assumed in a constant pressure, so</p>
+<p><span class="math notranslate nohighlight">\(P_3 = P_2\)</span></p>
+<p>and from the first law for the boiler</p>
+<p><span class="math notranslate nohighlight">\(\dot Q_H=\dot m(h_3-h_2)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define variables</span>
+<span class="n">P_3</span> <span class="o">=</span> <span class="n">P_2</span>   <span class="c1">#pressure of state (3) in Pa</span>
+<span class="n">T_3</span> <span class="o">=</span> <span class="mi">600</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#temperature of state (3) in K</span>
+
+<span class="n">h_3</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_3</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T_3</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#enthalpy in state (3) in J/kg</span>
+<span class="n">Q_H</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">h_3</span> <span class="o">-</span> <span class="n">h_2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of heat supplied in boiler is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Q_H</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kW&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of heat supplied in boiler is: 3276.8 kW
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-c">
+<h3>Solution Approach for c)<a class="headerlink" href="#solution-approach-for-c" title="Link to this heading">#</a></h3>
+<p>The condenser is assumed to operate in a constant pressure</p>
+<p><span class="math notranslate nohighlight">\(P_4=P_1\)</span></p>
+<p>and from the first law</p>
+<p><span class="math notranslate nohighlight">\(\dot W=\dot m(h_3-h_4)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P_4</span> <span class="o">=</span> <span class="n">P_1</span>   <span class="c1">#pressure in state (4) in Pa</span>
+<span class="n">T_4</span> <span class="o">=</span> <span class="mi">260</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#temperatue in state (4) in K</span>
+
+<span class="n">h_4</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_4</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T_4</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#enthalpy in state (4) in J/kg</span>
+
+<span class="n">W</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">h_3</span> <span class="o">-</span> <span class="n">h_4</span><span class="p">)</span>   
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of work output from the turbine is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">W</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kW&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of work output from the turbine is: 704.2 kW
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-d">
+<h3>Solution Approach for d)<a class="headerlink" href="#solution-approach-for-d" title="Link to this heading">#</a></h3>
+<p>first law for the condenser</p>
+<p><span class="math notranslate nohighlight">\(\dot Q_L=\dot m(h_4-h_1)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q_L</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">h_4</span> <span class="o">-</span> <span class="n">h_1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of heat dissipated in the condenser based on inlet/outlet enthalpies is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Q_L</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kW&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of heat dissipated in the condenser based on inlet/outlet enthalpies is: 2575.7 kW
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-e">
+<h3>Solution Approach for e)<a class="headerlink" href="#solution-approach-for-e" title="Link to this heading">#</a></h3>
+<p>The firts law for the whole system</p>
+<p><span class="math notranslate nohighlight">\(E_in=E_out\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dot Q_H+\dot W_{pump}=\dot Q_L+\dot W\)</span></p>
+<p>therefore</p>
+<p><span class="math notranslate nohighlight">\(\dot Q_L=\dot Q_H+\dot W_{pump}-\dot W\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q_L</span> <span class="o">=</span> <span class="n">Q_H</span> <span class="o">+</span> <span class="n">W_P</span> <span class="o">-</span> <span class="n">W</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of heat dissipated in the condenser based the first law for the whole system is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Q_L</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;kW&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of heat dissipated in the condenser based the first law for the whole system is: 2575.7 kW
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-f">
+<h3>Solution Approach for f)<a class="headerlink" href="#solution-approach-for-f" title="Link to this heading">#</a></h3>
+<p>for an open steady-state system</p>
+<p><span class="math notranslate nohighlight">\(\Sigma \dot m_es_e-\Sigma \dot m_is_i=\Sigma \dot Q/T+\dot S_{gen}\)</span></p>
+<p>for the pump</p>
+<p><span class="math notranslate nohighlight">\(\dot Q=0\)</span></p>
+<p>therefore</p>
+<p><span class="math notranslate nohighlight">\(S_{gen}=\dot m(s_2-s_1)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_1</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_1</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#entropy in state (1) in J/kgK</span>
+<span class="n">s_2</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_2</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">d_2</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#entropy in state (2) in J/kgK </span>
+
+<span class="n">S_gen_P</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_2</span> <span class="o">-</span> <span class="n">s_1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of entropy generation in the pump is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen_P</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;W/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of entropy generation in the pump is: 5.9 W/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-g">
+<h3>Solution Approach for g)<a class="headerlink" href="#solution-approach-for-g" title="Link to this heading">#</a></h3>
+<p>for the boiler</p>
+<p><span class="math notranslate nohighlight">\(\dot Q=\dot Q_H\)</span></p>
+<p>therefore</p>
+<p><span class="math notranslate nohighlight">\(S_{gen}=\dot m(s_3-s_2)-\dot Q_H/T_H\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define variables</span>
+<span class="n">T_H</span> <span class="o">=</span> <span class="mi">650</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#heat source in boiler temperature in K</span>
+
+<span class="n">s_3</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_3</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T_3</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#entropy in state (3) in J/kgK</span>
+<span class="n">S_gen_B</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_3</span> <span class="o">-</span> <span class="n">s_2</span><span class="p">)</span> <span class="o">-</span> <span class="n">Q_H</span> <span class="o">/</span> <span class="n">T_H</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of entropy generation in the boiler is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen_B</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;W/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of entropy generation in the boiler is: 3169.7 W/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-h">
+<h3>Solution Approach for h)<a class="headerlink" href="#solution-approach-for-h" title="Link to this heading">#</a></h3>
+<p>for the turbine</p>
+<p><span class="math notranslate nohighlight">\(\dot Q=0\)</span></p>
+<p>therefore</p>
+<p><span class="math notranslate nohighlight">\(S_{gen}=\dot m(s_4-s_3)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_4</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_4</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T_4</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#entropy in state (4) in J/kgK</span>
+
+<span class="n">S_gen_T</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_4</span> <span class="o">-</span> <span class="n">s_3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of entropy generation in the turbine is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen_T</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;W/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of entropy generation in the turbine is: 36.6 W/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-i">
+<h3>Solution Approach for i)<a class="headerlink" href="#solution-approach-for-i" title="Link to this heading">#</a></h3>
+<p>for the condenser</p>
+<p><span class="math notranslate nohighlight">\(\dot Q=\dot Q_L\)</span></p>
+<p>therefore</p>
+<p><span class="math notranslate nohighlight">\(S_{gen}=\dot m(s_1-s_4)+\dot Q_L/T_L\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define variables</span>
+<span class="n">T_L</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#heat sink temperature in K</span>
+<span class="n">S_gen_C</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_1</span> <span class="o">-</span> <span class="n">s_4</span><span class="p">)</span> <span class="o">+</span> <span class="n">Q_L</span> <span class="o">/</span> <span class="n">T_L</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of entropy generation in the condenser is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen_C</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;W/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of entropy generation in the condenser is: 2024.6 W/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-j">
+<h3>Solution Approach for j)<a class="headerlink" href="#solution-approach-for-j" title="Link to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(S_{gen}=S_{gen,pump}+S_{gen,boiler}+S_{gen,turbine}+S_{gen,condenser}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_gen</span> <span class="o">=</span> <span class="n">S_gen_P</span> <span class="o">+</span> <span class="n">S_gen_B</span> <span class="o">+</span> <span class="n">S_gen_T</span> <span class="o">+</span> <span class="n">S_gen_C</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total entropy generation based on each element is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;W/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The total entropy generation based on each element is: 5236.8 W/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="solution-approach-for-k">
+<h3>Solution Approach for k)<a class="headerlink" href="#solution-approach-for-k" title="Link to this heading">#</a></h3>
+<p>from the second law for a closed system</p>
+<p><span class="math notranslate nohighlight">\(S_{gen}=-\Sigma Q/T=-(Q_H/T_H-Q_L/T_L)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_gen</span> <span class="o">=</span> <span class="o">-</span> <span class="p">(</span><span class="n">Q_H</span> <span class="o">/</span> <span class="n">T_H</span> <span class="o">-</span> <span class="n">Q_L</span> <span class="o">/</span> <span class="n">T_L</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total entropy generation looking at the system as a heat engine is:&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">S_gen</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;W/K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The total entropy generation looking at the system as a heat engine is: 5236.8 W/K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/Chapter6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="CH6-Q13.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">6.14 Entropy Generation for a Steam Cycle</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CH6-Q15.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6.16 Multilevel Carnot Heat Engine</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-c">Solution Approach for c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-d">Solution Approach for d)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-e">Solution Approach for e)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-f">Solution Approach for f)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-g">Solution Approach for g)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-h">Solution Approach for h)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-i">Solution Approach for i)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-j">Solution Approach for j)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-k">Solution Approach for k)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Faculty of Applied Science, UBC licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">[CC-BY-SA 4.0]</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
