@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=237b5ed9" />
@@ -669,7 +669,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(a) Final temperature : 170.41 °C
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;CoolProp&#39;
 </pre></div>
 </div>
 </div>
@@ -711,8 +718,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2dff7d839925ff55401a388c1d3c087098774c9a97c30b91752fe095cf8cedb7.png" src="../../_images/2dff7d839925ff55401a388c1d3c087098774c9a97c30b91752fe095cf8cedb7.png" />
-<img alt="../../_images/aef8945bc2db8082c35523aa2fafaf724b9907d09c8c60ad1b827083f8d78015.png" src="../../_images/aef8945bc2db8082c35523aa2fafaf724b9907d09c8c60ad1b827083f8d78015.png" />
+<img alt="../../_images/c857ed356bd21bc6b53a900af3415c3c24bd086f85873b8f00e333b36a8f4fb0.png" src="../../_images/c857ed356bd21bc6b53a900af3415c3c24bd086f85873b8f00e333b36a8f4fb0.png" />
+<img alt="../../_images/fe9cec76ce5a77bc470bee78cfca0876e384f7e96eee54a79e59a994e3ca1077.png" src="../../_images/fe9cec76ce5a77bc470bee78cfca0876e384f7e96eee54a79e59a994e3ca1077.png" />
 </div>
 </div>
 </section>
@@ -731,7 +738,7 @@ document.write(`
         },
         kernelOptions: {
             name: "oer",
-            path: "./notebooks/Chapter2"
+            path: "./notebooks\Chapter2"
         },
         predefinedOutput: true
     }

@@ -1,0 +1,60 @@
+Traceback (most recent call last):
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# import the libraries we'll need
+import CoolProp.CoolProp as CP
+
+# define variables
+fluid = "R134A"  # define the fluid or material of interest
+T_3 = 40 + 273.15 #state #3 temperature in K
+h_3 = CP.PropsSI("H", "T", T_3, "Q", 0, fluid)/1000  # enthalpy of the refrigerant at state #3 in kJ/kg
+
+h_4 = h_3   #constant enthalpy through a throttling valve
+
+T_4 = -20 + 273.15   #temperature of refrigerant at state #4 in K
+
+P_4 = CP.PropsSI("P", "T", T_4, "Q", 1, fluid)  # pressure of the refrigerant at state #1 in Pa (quality is set to 1 as the pressure keeps constant in sat region)
+
+T_1 = T_4 #temperature at state #1 in K
+h_1 = CP.PropsSI("H", "T", T_1, "Q", 1, fluid)/1000  # enthalpy of the refrigerant at state #1 in kJ/kg
+
+T_2 = 120 + 273.15 #temperature at state #2 in K
+P_3 = CP.PropsSI("P", "T", T_3, "Q", 0, fluid)  # pressure of the refrigerant at state #3 in Pa
+P_2 = P_3 # pressure of the refrigerant at state #2 in Pa
+h_2 = CP.PropsSI("H", "T", T_2, "P", P_2, fluid)/1000  # enthalpy of the refrigerant at state #2 in kJ/kg
+
+q_c = h_1 - h_4
+
+q_h = h_2 - h_3
+
+w = h_2 - h_1
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 2[0m
+[0;32m      1[0m [38;5;66;03m# import the libraries we'll need[39;00m
+[1;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mCoolProp[39;00m[38;5;21;01m.[39;00m[38;5;21;01mCoolProp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mCP[39;00m
+[0;32m      4[0m [38;5;66;03m# define variables[39;00m
+[0;32m      5[0m fluid [38;5;241m=[39m [38;5;124m"[39m[38;5;124mR134A[39m[38;5;124m"[39m  [38;5;66;03m# define the fluid or material of interest[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'CoolProp'
+

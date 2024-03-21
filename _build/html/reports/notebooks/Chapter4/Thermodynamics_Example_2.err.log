@@ -1,0 +1,66 @@
+Traceback (most recent call last):
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+## Solution:
+
+import CoolProp.CoolProp as CP
+import math
+
+# Gas choice
+gas = "Oxygen"
+
+# Given values
+m = 1.0  # Mass of the gas in kg
+T1 = 20 + 273.15  # Initial temperature in Kelvin (converted from 20°C)
+V1 = 0.8  # Initial volume in m^3
+V2 = 2 * V1  # Final volume (double the initial volume)
+R = CP.PropsSI('GAS_CONSTANT', gas) / CP.PropsSI('MOLAR_MASS', gas)  # Specific gas constant for Oxygen
+
+# 1. Specific Boundary Work (w_boundary)
+# For an isothermal process, P1 * V1 = P2 * V2 (Ideal Gas Law), and P1 can be found from P1 = m * R * T1 / V1
+P1 = m * R * T1 / V1
+# Calculating the boundary work
+w_boundary = P1 * V1 * math.log(V2 / V1)
+
+# 2. Heat Transfer (Q)
+# For an isothermal process, the heat transfer is equal to the boundary work done
+Q = w_boundary
+
+# 3. Change in Specific Internal Energy (Δu)
+# For an isothermal process of an ideal gas, Δu = 0
+delta_u = 0
+
+# Output the results
+print(f"Specific Boundary Work (w_boundary): {round(w_boundary/1e3,1)} kJ")
+print(f"Heat Transfer (Q): {round(Q/1e3,1)} kJ")
+print(f"Change in Specific Internal Energy (Δu): {round(delta_u/1e3,1)} kJ")
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 3[0m
+[0;32m      1[0m [38;5;66;03m## Solution:[39;00m
+[1;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mCoolProp[39;00m[38;5;21;01m.[39;00m[38;5;21;01mCoolProp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mCP[39;00m
+[0;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mmath[39;00m
+[0;32m      6[0m [38;5;66;03m# Gas choice[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'CoolProp'
+

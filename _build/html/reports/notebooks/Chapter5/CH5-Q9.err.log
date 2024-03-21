@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# import the libraries we'll need
+import CoolProp.CoolProp as CP
+import numpy as np
+
+# define variables
+fluid = "hydrogen"  # define the fluid or material of interest
+R = 4124   #fluid gas constant in J/kg.K
+C_p = 14307   #fluid Cp in J/kg.K
+T_1 = -20 + 273.15   #inlet temperature in K
+P_1 = 5e+5   #inlet pressure in Pa
+P_2 = 2e+5   #outlet pressure in Pa
+m = 0.005   #fluid mass flow rate in kg/s
+D_1 = 0.04   #inlet diameter in m
+A_1 = np.pi * D_1 **2 /4   #inlet area in m2
+rho_1 = CP.PropsSI("D", "T", T_1, "P", P_1, fluid)   #density of fluid at inlet in kg/m3
+
+V_1 = m / (rho_1 * A_1)   #velocity of fluid at inlet
+
+print('The velocity of the fluid at inlet is:', f"{V_1:.1f}", 'm/s')
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 2[0m
+[0;32m      1[0m [38;5;66;03m# import the libraries we'll need[39;00m
+[1;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mCoolProp[39;00m[38;5;21;01m.[39;00m[38;5;21;01mCoolProp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mCP[39;00m
+[0;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m      5[0m [38;5;66;03m# define variables[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'CoolProp'
+
