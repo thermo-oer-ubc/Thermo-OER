@@ -1,0 +1,60 @@
+Traceback (most recent call last):
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import CoolProp.CoolProp as CP
+import math
+
+# Given values
+m = 2.0  # Mass of oxygen in kg
+T1 = 25 + 273.15  # Initial temperature in Kelvin
+P1 = 101325  # Initial pressure in Pa (1 atm)
+P2 = 5 * P1  # Final pressure (5 atm)
+gamma = CP.PropsSI('Cpmass', 'T', T1, 'P', P1, 'Oxygen') / CP.PropsSI('Cvmass', 'T', T1, 'P', P1, 'Oxygen')  # γ for oxygen
+
+# Final Temperature (T2) for adiabatic process
+T2 = T1 * (P2 / P1) ** ((gamma - 1) / gamma)
+
+# Calculate specific volumes V1 and V2 using ideal gas law
+R = CP.PropsSI('GAS_CONSTANT', 'Oxygen') / CP.PropsSI('MOLAR_MASS', 'Oxygen')  # Specific gas constant for Oxygen
+V1 = m * R * T1 / P1
+V2 = m * R * T2 / P2
+
+# Calculate work done (W) during adiabatic process
+W = (P1 * V1 - P2 * V2) / (gamma - 1)
+
+# Change in internal energy (ΔU) for adiabatic process
+delta_U = -W
+
+# Output the results (W and ΔU in kJ)
+print(f"Final Temperature (T2): {round(T2)} K")
+print(f"Work done (W): {round(W/1000,1)} kJ")
+print(f"Change in internal energy (ΔU): {round(delta_U/1e3,1)} kJ")
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mCoolProp[39;00m[38;5;21;01m.[39;00m[38;5;21;01mCoolProp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mCP[39;00m
+[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmath[39;00m
+[0;32m      4[0m [38;5;66;03m# Given values[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'CoolProp'
+

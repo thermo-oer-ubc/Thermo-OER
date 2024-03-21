@@ -1,0 +1,77 @@
+Traceback (most recent call last):
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\ckeulen\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import CoolProp.CoolProp as CP
+import pandas as pd
+import numpy as np
+
+fluids = ['Water', 'Ammonia', 'R134a']
+for fluid in fluids:
+    T_min = CP.PropsSI('Tmin', fluid) + 10  # Adding a small offset to Tmin
+    T_max = CP.PropsSI('Tcrit', fluid)
+    T_vals = np.linspace(T_min, T_max, 100)  # Number of points
+
+    v_liquid = []
+    v_vapor = []
+
+    for T in T_vals:
+        density_liquid = CP.PropsSI('D', 'T', T, 'Q', 0, fluid)  # Saturated liquid
+        density_vapor = CP.PropsSI('D', 'T', T, 'Q', 1, fluid)  # Saturated vapor
+        v_liquid.append(1/density_liquid)
+        v_vapor.append(1/density_vapor)
+
+    # Save to CSV
+    df = pd.DataFrame({'Temperature (K)': T_vals, 'Specific Volume Liquid (m^3/kg)': v_liquid, 
+                       'Specific Volume Vapor (m^3/kg)': v_vapor})
+    df.to_csv(f'{fluid}_T_v.csv', index=False)
+
+
+import plotly.graph_objs as go
+
+for fluid in fluids:
+    # Reading data from CSV
+    df = pd.read_csv(f'{fluid}_T_v.csv')
+
+    # Creating Plotly plot
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=df['Specific Volume Liquid (m^3/kg)'], y=df['Temperature (K)'],
+                             mode='lines', name='Saturated Liquid'))
+    fig.add_trace(go.Scatter(x=df['Specific Volume Vapor (m^3/kg)'], y=df['Temperature (K)'],
+                             mode='lines', name='Saturated Vapor'))
+
+    # Set log scale for x-axis
+    fig.update_layout(xaxis_type="log", title=f'{fluid} T-v Diagram', 
+                      xaxis_title='Specific Volume (m^3/kg)', yaxis_title='Temperature (K)')
+
+    # Save as HTML
+    fig.write_html(f'{fluid}_T_v_plot.html')
+
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mCoolProp[39;00m[38;5;21;01m.[39;00m[38;5;21;01mCoolProp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mCP[39;00m
+[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[0;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'CoolProp'
+
