@@ -37,12 +37,13 @@ print('The mass of liquid fluid is', f"{m_l:.3f}", 'kg')
 
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn[1], line 2[0m
-[0;32m      1[0m [38;5;66;03m#import librarier[39;00m
-[1;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mCoolProp[39;00m[38;5;21;01m.[39;00m[38;5;21;01mCoolProp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mCP[39;00m
-[0;32m      4[0m [38;5;66;03m#define variables[39;00m
-[0;32m      5[0m V [38;5;241m=[39m [38;5;241m1[39m   [38;5;66;03m#tank volume in m3[39;00m
+[1;31mNameError[0m                                 Traceback (most recent call last)
+Cell [1;32mIn[1], line 9[0m
+[0;32m      6[0m m_mix [38;5;241m=[39m [38;5;241m10[39m   [38;5;66;03m#mixture mass in kg[39;00m
+[0;32m      7[0m T [38;5;241m=[39m [38;5;241m25[39m [38;5;241m+[39m [38;5;241m273.15[39m   [38;5;66;03m#temperature in K[39;00m
+[1;32m----> 9[0m D [38;5;241m=[39m [43mm[49m [38;5;241m/[39m V   [38;5;66;03m#density in kg/m3 used in CoolProp[39;00m
+[0;32m     10[0m fluid [38;5;241m=[39m [38;5;124m"[39m[38;5;124mwater[39m[38;5;124m"[39m  [38;5;66;03m# define the fluid or material of interest[39;00m
+[0;32m     12[0m x [38;5;241m=[39m CP[38;5;241m.[39mPropsSI([38;5;124m"[39m[38;5;124mQ[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mT[39m[38;5;124m"[39m, T, [38;5;124m"[39m[38;5;124mD[39m[38;5;124m"[39m, D , fluid)   [38;5;66;03m#the quality of the mixture[39;00m
 
-[1;31mModuleNotFoundError[0m: No module named 'CoolProp'
+[1;31mNameError[0m: name 'm' is not defined
 
