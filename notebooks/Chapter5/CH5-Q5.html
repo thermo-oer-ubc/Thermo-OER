@@ -185,7 +185,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">B. Getting Started: Introduction to Jupyter and Python!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started: Introduction to Jupyter and Python!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/basic_math.html">Basic operations inside Jupyter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/Table_G1_Properties_of_ideal_gases.html">Defining variables: Properties of Ideal Gases as use case</a></li>
 </ul>
@@ -548,6 +548,8 @@ document.write(`
 <span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
 
 <span class="c1"># define variables</span>
+
+<span class="c1">## add more comments from CKeulen</span>
 <span class="n">fluid</span> <span class="o">=</span> <span class="s2">&quot;R134A&quot;</span>  <span class="c1"># define the fluid or material of interest</span>
 <span class="n">T_3</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">+</span> <span class="mf">273.15</span> <span class="c1">#stete #3 temperature in K</span>
 <span class="n">h_3</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T_3</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">fluid</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span>  <span class="c1"># enthalpy of the refrigerant at state #3 in kJ/kg</span>
@@ -844,7 +846,7 @@ The COP of the cycle is: 1.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f92eddca4f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1bb3e076b80&gt;
 </pre></div>
 </div>
 <img alt="../../_images/0017576422e610c4ec109cad3a9db7bd6fe648034c4d42664568512ac2df2ee4.png" src="../../_images/0017576422e610c4ec109cad3a9db7bd6fe648034c4d42664568512ac2df2ee4.png" />
@@ -865,7 +867,7 @@ The COP of the cycle is: 1.1
         },
         kernelOptions: {
             name: "oer",
-            path: "./notebooks/Chapter5"
+            path: "./notebooks\Chapter5"
         },
         predefinedOutput: true
     }
