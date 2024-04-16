@@ -8,7 +8,7 @@ jupytext:
 kernelspec:
   display_name: oer
   language: python
-  name: python3
+  name: oerminimal
 ---
 
 # 1.3 Energy in a Moving Vehicle

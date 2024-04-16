@@ -8,7 +8,7 @@ jupytext:
 kernelspec:
   display_name: oer
   language: python
-  name: python3
+  name: oerminimal
 ---
 
 # 4.4 Heat Transfer in a Rigid Container

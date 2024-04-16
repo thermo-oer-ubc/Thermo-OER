@@ -8,7 +8,7 @@ jupytext:
 kernelspec:
   display_name: oer
   language: python
-  name: python3
+  name: OERminimal
 ---
 
 # 1.2 Density of a Gas

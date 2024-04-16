@@ -8,7 +8,7 @@ jupytext:
 kernelspec:
   display_name: oer
   language: python
-  name: python3
+  name: oerminimal
 ---
 
 # 4.5 Helium in a Spring-Loaded Cylinder
