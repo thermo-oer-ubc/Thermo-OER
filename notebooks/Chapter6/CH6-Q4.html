@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>6.5 Heat engine and refrigeration cycle &#8212; OER Engineering Thermodynamics</title>
   
@@ -28,36 +29,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=237b5ed9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter6/CH6-Q4';</script>
@@ -518,15 +519,15 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="heat-engine-and-refrigeration-cycle">
-<h1>6.5 Heat engine and refrigeration cycle<a class="headerlink" href="#heat-engine-and-refrigeration-cycle" title="Link to this heading">#</a></h1>
+<h1>6.5 Heat engine and refrigeration cycle<a class="headerlink" href="#heat-engine-and-refrigeration-cycle" title="Permalink to this heading">#</a></h1>
 <section id="problem-statement">
-<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
 <p>Work produced in a heat engine is used to drive the compressor of a refrigration cycle as shown in the figure below. The heat source of the heat engine gains heat at <span class="math notranslate nohighlight">\(T_{H&#64;HE}=350^{\circ} C\)</span> and the refrigration cycle is meant to absorb heat from a cold room at <span class="math notranslate nohighlight">\(T_{L&#64;Ref}=-10^{\circ} C\)</span>. Heat dissipation of both cycles happen ideally at the temperature same as environment as <span class="math notranslate nohighlight">\(T_{L&#64;HE}=T_{H&#64;Ref}=25^{\circ} C\)</span>. Given both the cycles are operating at their most idael condition, for <span class="math notranslate nohighlight">\(\dot Q_{L&#64;Ref}=10\:kW\)</span> of cooling required at the cold room, determine</p>
 <p>a) how much heat is to be supplied at the heat source <span class="math notranslate nohighlight">\(\dot Q_{H&#64;HE}\)</span> and</p>
 <p>b) how much heat is dissipated to the environment .</p>
 <p><img alt="CH6-Q4.png" src="../../_images/CH6-Q4.png" /></p>
 <section id="solution-approach-for-a">
-<h3>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Link to this heading">#</a></h3>
+<h3>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h3>
 <p>the most ideal case for the heat engine and the refrigration cycle happens when they operate as Carnot cycles. Therefore, fot the refrigration cycle</p>
 <p><span class="math notranslate nohighlight">\(COP = \dot Q_{L&#64;Ref}/\dot W=T_{L&#64;Ref}/(T_{H&#64;Ref}-T_{L&#64;Ref})\)</span></p>
 <p>and for the heat engine</p>
@@ -565,7 +566,7 @@ document.write(`
 </div>
 </section>
 <section id="solution-approach-for-b">
-<h3>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Link to this heading">#</a></h3>
+<h3>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h3>
 <p>looking at the system as a whole, based on the first law</p>
 <p><span class="math notranslate nohighlight">\(\dot Q_{in} = \dot Q_{out}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\dot Q_{H&#64;HE}+\dot Q_{L&#64;Ref}=\dot Q_{L&#64;HE}+\dot Q_{H&#64;Ref}\)</span></p>
@@ -600,16 +601,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "oer"
+            mode: "oerminimal"
         },
         kernelOptions: {
-            name: "oer",
-            path: "./notebooks\Chapter6"
+            name: "oerminimal",
+            path: "./notebooks/Chapter6"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'oer'</script>
+    <script>kernelName = 'oerminimal'</script>
 
                 </article>
               
