@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.5 Piston-cylinder: Isobaric- Isochoric process &#8212; OER Engineering Thermodynamics</title>
+    <title>Chapter 2 &#8212; OER Engineering Thermodynamics</title>
   
   
   
@@ -59,11 +59,13 @@
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter2/piston-cylinder-isobaric-isochoric';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Chapter2/CH2-Q13';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.6: Weighted Piston" href="CH2-Q6.html" />
-    <link rel="prev" title="2.4 Piston-cylinder: Isobaric process" href="piston-cylinder.html" />
+    <link rel="next" title="3. Ideal and Real Gases" href="../Chapter3/chapter3.html" />
+    <link rel="prev" title="2.10: Water in Two Tanks" href="CH2-Q10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -206,13 +208,13 @@
 <li class="toctree-l2"><a class="reference internal" href="complete-table-ammonia.html">2.2 Thermodynamic properties of Ammonia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="complete-table-R134a.html">2.3 Thermodynamic properties of R-134a</a></li>
 <li class="toctree-l2"><a class="reference internal" href="piston-cylinder.html">2.4 Piston-cylinder: Isobaric process</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.5 Piston-cylinder: Isobaric- Isochoric process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piston-cylinder-isobaric-isochoric.html">2.5 Piston-cylinder: Isobaric- Isochoric process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH2-Q6.html">2.6: Weighted Piston</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH2-Q7.html">2.7: Weighted Piston and Pressed Spring</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH2-Q8.html">2.8: Internal Energy in a Rigid Container</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH2-Q9.html">2.9: Saturated Water in a Rigid Tank</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CH2-Q10.html">2.10: Water in Two Tanks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CH2-Q13.html">Chapter 2</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Chapter 2</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/chapter3.html">3. Ideal and Real Gases</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -377,7 +379,7 @@
       
       
       
-      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter2/piston-cylinder-isobaric-isochoric.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/thermo-oer-ubc/Thermo-OER/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Chapter2/CH2-Q13.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +409,7 @@
       
       
       
-      <li><a href="../../_sources/notebooks/Chapter2/piston-cylinder-isobaric-isochoric.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/Chapter2/CH2-Q13.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -491,7 +493,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>2.5 Piston-cylinder: Isobaric- Isochoric process</h1>
+    <h1>Chapter 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -501,10 +503,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-strategy">Solution strategy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-for-a">Solution for (a):</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-for-b">Solution for (b)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-13-air-in-lungs">Question #13: Air in Lungs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -516,148 +519,67 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="piston-cylinder-isobaric-isochoric-process">
-<h1>2.5 Piston-cylinder: Isobaric- Isochoric process<a class="headerlink" href="#piston-cylinder-isobaric-isochoric-process" title="Permalink to this heading">#</a></h1>
-<section id="problem-statement">
-<h2>Problem statement:<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
-<p>A piston-cylinder device contains steam initially at 200 C and 200 kPa. The steam is first cooled isobarically to saturated liquid, then isochorically until its pressure reaches 25 kPa.</p>
-<p>(a) Calculate the specific heat transfer in the whole process</p>
-<p>(b) Sketch the whole process on the P−vand T−v diagrams</p>
-</section>
-<section id="solution-strategy">
-<h2>Solution strategy<a class="headerlink" href="#solution-strategy" title="Permalink to this heading">#</a></h2>
-<p>Identify the States:
-State 1: Initial state - T1=200 C and P1=200kPa
-State 2: After isobaric cooling to saturated liquid at P2=200kPa
-State 3: After isochoric cooling with V3=V2 and P3=25kPa.</p>
-<p>Sketch the Process on P-v and T-v Diagrams:
-The process from State 1 to State 2 is a horizontal line on the P-v diagram and a downward slope on the T-v diagram.
-The process from State 2 to State 3 is a vertical line downward on the P-v diagram and also a downward slope on the T-v diagram.</p>
-<p>Calculate the Specific Heat Transfer:
-Using the first law for a closed system:
-Δu=q−w
-Where:
-Δu = Change in internal energy between states.
-q = Heat transfer.
-w = Work done.
-For the isobaric process (State 1 to State 2), w=P(V2−V1).
-For the isochoric process (State 2 to State 3), w=0.</p>
-<p>Thus, the total heat transfer for the whole process is:
-q=Δu+w</p>
-<p>Let’s proceed with the code to sketch the diagrams and calculate the specific heat transfer:</p>
-</section>
-<section id="solution-for-a">
-<h2>Solution for (a):<a class="headerlink" href="#solution-for-a" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-2">
+<h1><a class="reference external" href="https://pressbooks.bccampus.ca/thermo1/chapter/2-0-chapter-introduction-and-learning-objectives/">Chapter 2</a><a class="headerlink" href="#chapter-2" title="Permalink to this heading">#</a></h1>
+<section id="question-13-air-in-lungs">
+<h2>Question #13: Air in Lungs<a class="headerlink" href="#question-13-air-in-lungs" title="Permalink to this heading">#</a></h2>
+<p>Human lungs contain around <span class="math notranslate nohighlight">\(V=6\:L\)</span> of air. Calculate, assuming a constant volume for human lungs,</p>
+<p>a) how much air is stored in human lungs in atmospheric pressure assuming the air in human lungs is heated to human body temperature at <span class="math notranslate nohighlight">\(T_b=36\:^{\circ}C\)</span>?</p>
+<p>b) consider a human living at a <span class="math notranslate nohighlight">\(H=4000\:m\)</span> elevation from the sea level where the air pressure is <span class="math notranslate nohighlight">\(P_e=60\:kPa\)</span>. How much air is stored the lungs of this individual assuming the air in lungs is heated to human body temperature at <span class="math notranslate nohighlight">\(T_b=36\:^{\circ}C\)</span>?</p>
+<section id="solution-approach-for-a">
+<h3>Solution Approach for a)<a class="headerlink" href="#solution-approach-for-a" title="Permalink to this heading">#</a></h3>
+<p>from density</p>
+<p><span class="math notranslate nohighlight">\(D=m/V\)</span></p>
+<p>where m is the mass stored in lungs and V is the volume of lungs, so</p>
+<p><span class="math notranslate nohighlight">\(m=DV\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import librarier</span>
 <span class="kn">import</span> <span class="nn">CoolProp.CoolProp</span> <span class="k">as</span> <span class="nn">CP</span>
 
-<span class="c1"># Given data</span>
-<span class="n">T1</span> <span class="o">=</span> <span class="mi">350</span> <span class="o">+</span> <span class="mf">273.15</span>  <span class="c1"># Initial temperature in K</span>
-<span class="n">P1</span> <span class="o">=</span> <span class="mf">1000e3</span>  <span class="c1"># Initial pressure in Pa</span>
-<span class="n">P2</span> <span class="o">=</span> <span class="mf">1000e3</span>  <span class="c1"># Pressure after isobaric cooling in Pa</span>
-<span class="n">P3</span> <span class="o">=</span> <span class="mf">25e3</span>  <span class="c1"># Final pressure after isochoric process in Pa</span>
+<span class="n">fluid</span> <span class="o">=</span> <span class="s2">&quot;air&quot;</span>  <span class="c1"># define the fluid or material of interest</span>
 
-<span class="c1"># State 1 properties</span>
-<span class="n">v1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
-<span class="n">u1</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
+<span class="c1">#define variables</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mf">0.006</span>   <span class="c1">#volume of lungs in m3</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">36</span> <span class="o">+</span> <span class="mf">273.15</span>   <span class="c1">#human body temperature in K</span>
+<span class="n">P_atm</span> <span class="o">=</span> <span class="mi">101325</span>   <span class="c1">#atmospheric pressure in Pa</span>
 
-<span class="c1"># State 2 properties</span>
-<span class="n">T2</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>  <span class="c1"># Saturated liquid</span>
-<span class="n">v2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
-<span class="n">u2</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_atm</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#air density in lungs in kg/m3</span>
 
-<span class="c1"># State 3 properties (isochoric)</span>
-<span class="n">v3</span> <span class="o">=</span> <span class="n">v2</span>
-<span class="n">T3</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">v3</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P3</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
-<span class="n">u3</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">v3</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P3</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">D</span> <span class="o">*</span> <span class="n">V</span>   <span class="c1">#air mass in lungs in kg</span>
 
-<span class="c1"># Calculate work and heat transfer</span>
-<span class="n">w_12</span> <span class="o">=</span> <span class="n">P1</span> <span class="o">*</span> <span class="p">(</span><span class="n">v2</span> <span class="o">-</span> <span class="n">v1</span><span class="p">)</span>  <span class="c1"># Isobaric process</span>
-<span class="n">w_23</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Isochoric process</span>
-<span class="n">q_12</span> <span class="o">=</span> <span class="p">(</span><span class="n">u2</span> <span class="o">-</span> <span class="n">u1</span><span class="p">)</span> <span class="o">+</span> <span class="n">w_12</span>
-<span class="n">q_23</span> <span class="o">=</span> <span class="n">u3</span> <span class="o">-</span> <span class="n">u2</span>  <span class="c1"># Isochoric process so no work</span>
-<span class="n">q_total</span> <span class="o">=</span> <span class="p">(</span><span class="n">q_12</span> <span class="o">+</span> <span class="n">q_23</span><span class="p">)</span><span class="o">/</span><span class="mf">1e3</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Specific heat transfer for the whole process: </span><span class="si">{</span><span class="n">q_total</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> kJ/kg&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of air in lungs at atmospheric pressure and body temperature is&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;mg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Specific heat transfer for the whole process: -2754.35 kJ/kg
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of air in lungs at atmospheric pressure and body temperature is 6.85 mg
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="solution-for-b">
-<h2>Solution for (b)<a class="headerlink" href="#solution-for-b" title="Permalink to this heading">#</a></h2>
+<section id="solution-approach-for-b">
+<h3>Solution Approach for b)<a class="headerlink" href="#solution-approach-for-b" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Critical properties</span>
-<span class="n">P_critical</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;Pcrit&quot;</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
-<span class="n">T_critical</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;Tcrit&quot;</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span>
-<span class="n">T_triple</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;Ttriple&quot;</span><span class="p">,</span><span class="s2">&quot;water&quot;</span><span class="p">)</span>
-<span class="c1"># P-v diagram with dome</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">pressures</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T3</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">),</span> <span class="n">P_critical</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">v_liquid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">P</span> <span class="ow">in</span> <span class="n">pressures</span><span class="p">]</span>
-<span class="n">v_vapor</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">P</span> <span class="ow">in</span> <span class="n">pressures</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_liquid</span><span class="p">,</span> <span class="n">pressures</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s2">&quot;b-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Saturated Liquid&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_vapor</span><span class="p">,</span> <span class="n">pressures</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s2">&quot;r-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Saturated Vapor&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="p">[</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">],</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="n">P3</span><span class="p">])</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">,</span>
-    <span class="s2">&quot;o-&quot;</span><span class="p">,</span>
-    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span>
-    <span class="n">markerfacecolor</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span>
-    <span class="n">v1</span><span class="p">,</span> <span class="n">P1</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v2</span> <span class="o">-</span> <span class="n">v1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span>
-<span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Specific Volume (m^3/kg)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pressure (kPa)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;P-v Diagram&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P_e</span> <span class="o">=</span> <span class="mf">60E+3</span>   <span class="c1">#pressure at a 4000m elevation in Pa</span>
 
-<span class="c1"># T-v diagram with dome</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">temperatures</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">T_triple</span><span class="p">,</span> <span class="n">T_critical</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">v_liquid_T</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">temperatures</span><span class="p">]</span>
-<span class="n">v_vapor_T</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">temperatures</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_liquid_T</span><span class="p">,</span> <span class="n">temperatures</span><span class="p">,</span> <span class="s2">&quot;b-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Saturated Liquid&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_vapor_T</span><span class="p">,</span> <span class="n">temperatures</span><span class="p">,</span> <span class="s2">&quot;r-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Saturated Vapor&quot;</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P_e</span> <span class="p">,</span> <span class="n">fluid</span><span class="p">)</span>   <span class="c1">#air density in lungs in kg/m3</span>
 
-<span class="c1"># Isobaric lines for T-v plot</span>
-<span class="n">v_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">v_liquid_T</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">v_vapor_T</span><span class="p">)),</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">T_200kPa</span> <span class="o">=</span> <span class="p">[</span><span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">v</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">v_range</span><span class="p">]</span>
-<span class="n">T_25kPa</span> <span class="o">=</span> <span class="p">[</span><span class="n">CP</span><span class="o">.</span><span class="n">PropsSI</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">v</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="mf">25e3</span><span class="p">,</span> <span class="s2">&quot;Water&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">v_range</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_range</span><span class="p">,</span> <span class="n">T_200kPa</span><span class="p">,</span> <span class="s2">&quot;g--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;p=200kPa&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_range</span><span class="p">,</span> <span class="n">T_25kPa</span><span class="p">,</span> <span class="s2">&quot;m--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;p=25kPa&quot;</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">D</span> <span class="o">*</span> <span class="n">V</span>   <span class="c1">#air mass in lungs in kg</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">],</span> <span class="p">[</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="n">T3</span><span class="p">],</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
-<span class="c1"># plt.arrow(v1, T1, v2-v1, T2-T1, head_width=0.01, head_length=10, fc=&#39;black&#39;, ec=&#39;black&#39;)</span>
-<span class="c1"># plt.arrow(v2, T2, 0, T3-T2, head_width=0.01, head_length=10, fc=&#39;black&#39;, ec=&#39;black&#39;)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Specific Volume (m^3/kg)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (K)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;T-v Diagram&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">300</span><span class="p">,</span> <span class="mi">660</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The amount of air in lungs at 4000m elevation and body temperature is&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;mg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6f41e388a0742202e62f8b22385847540f37984f8d2246371b28c703cbb99b03.png" src="../../_images/6f41e388a0742202e62f8b22385847540f37984f8d2246371b28c703cbb99b03.png" />
-<img alt="../../_images/cd8b9a9073f9adb6c1d2db7d0cbb14d074eaac029d03ecbc2c0dfefc420cd870.png" src="../../_images/cd8b9a9073f9adb6c1d2db7d0cbb14d074eaac029d03ecbc2c0dfefc420cd870.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of air in lungs at 4000m elevation and body temperature is 4.06 mg
+</pre></div>
 </div>
 </div>
+</div>
+</section>
 </section>
 </section>
 
@@ -670,16 +592,16 @@ q=Δu+w</p>
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "oerminimal"
+            mode: "python"
         },
         kernelOptions: {
-            name: "oerminimal",
+            name: "python3",
             path: "./notebooks/Chapter2"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'oerminimal'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -692,20 +614,20 @@ q=Δu+w</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="piston-cylinder.html"
+       href="CH2-Q10.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">2.4 Piston-cylinder: Isobaric process</p>
+        <p class="prev-next-title">2.10: Water in Two Tanks</p>
       </div>
     </a>
     <a class="right-next"
-       href="CH2-Q6.html"
+       href="../Chapter3/chapter3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2.6: Weighted Piston</p>
+        <p class="prev-next-title">3. Ideal and Real Gases</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -725,10 +647,11 @@ q=Δu+w</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem statement:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-strategy">Solution strategy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-for-a">Solution for (a):</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-for-b">Solution for (b)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-13-air-in-lungs">Question #13: Air in Lungs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-a">Solution Approach for a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-approach-for-b">Solution Approach for b)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
