@@ -33,6 +33,7 @@ parts:
         - file: notebooks/Chapter2/CH2-Q8.ipynb
         - file: notebooks/Chapter2/CH2-Q9.ipynb
         - file: notebooks/Chapter2/CH2-Q10.ipynb
+        - file: notebooks/Chapter2/CH2-Q13.ipynb                        
   - file: notebooks/Chapter3/chapter3.md
     sections:
         - file: notebooks/Chapter3/CH3-Q1_v1.ipynb  
