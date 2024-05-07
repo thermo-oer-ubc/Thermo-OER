@@ -21,6 +21,10 @@ parts:
         - file: notebooks/Chapter1/Problem_6_Compressed_Liquid_Approximation.md
         - file: notebooks/Chapter1/Problem_7_Conversion_of_Temperature.md
         - file: notebooks/Chapter1/Problem_8_Specific_Entropy_Calculation.md
+        - file: notebooks/Chapter1/Problem_9_Steam and a Divider.ipynb
+        - file: notebooks/Chapter1/Problem_10_Steam and Air.ipynb
+        - file: notebooks/Chapter1/Problem_11_Propane Tank.ipynb
+        - file: notebooks/Chapter1/Problem_12_Helium Balloon.ipynb
   - file: notebooks/Chapter2/thermo-properties.md
     sections:
         - file: notebooks/Chapter2/complete-table-water.ipynb
